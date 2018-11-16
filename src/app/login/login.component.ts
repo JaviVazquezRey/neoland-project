@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MatInputModule } from '@angular/material';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
