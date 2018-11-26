@@ -1,0 +1,36 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+img{
+    cursor: pointer;
+    max-height: 250px;
+}
+
+/* GENERAL */
+.container{
+    background: white;
+    border: 3px solid #2a2f50;
+    border-radius: 15px;
+    /*padding: 12px;*/
+}
+.padNormal{
+    padding: 12px;
+}
+
+.floatLeft{
+    float: left;
+}
+.sectionContainer{
+    margin: 25px 0px;
+    box-shadow: 7px 10px 15px #2a2f50;
+}
+.center{
+    text-align: center;
+}
+.shadow{
+    box-shadow: 7px 10px 15px #2a2f50 !important;
+}
+/* PROJECTS */

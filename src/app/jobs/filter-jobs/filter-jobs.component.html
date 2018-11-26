@@ -1,0 +1,47 @@
+<form class="ui form">
+  <h4 class="ui dividing header">Jobs</h4>
+
+  <div class="four fields">
+
+  <!-- BOOTCAMP -->
+
+    <div class="field">
+      <label>Bootcamp</label>
+      <select class="ui fluid dropdown" (change)="onBootcampChange($event)">
+        <option value="allBootcamps">All</option>
+        <option value="fullStack">Full Stack</option>
+        <option value="uiUx">UI/UX</option>
+        <option value="dataScience">Data Science</option>
+      </select>
+    </div>
+
+<!-- LOCATION -->
+    <div class="field">
+      <label>Location</label>
+      <select class="ui fluid dropdown" (change)="onLocationChange($event)">
+        <option value="allCenters">All</option>
+        <option value="madrid">Madrid</option>
+        <option value="barcelona">Barcelona</option>
+      </select>
+    </div>
+
+<!-- COMPANY -->
+<div class="field">
+  <label>Company</label>
+  <select class="ui fluid dropdown" (change)="onCompanyChange($event)">
+    <option value="allCenters">All</option>
+    <option value="madrid">Google</option>
+    <option value="barcelona">Facebook</option>
+    <option value="barcelona">Cabify</option>
+    <option value="barcelona">Ebay</option>
+    <option value="barcelona">Amazon</option>
+
+  </select>
+</div>
+
+  </div>
+
+</form>
+
+
+

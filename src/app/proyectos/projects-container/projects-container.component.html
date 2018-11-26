@@ -1,0 +1,45 @@
+<!-- 
+FILTERS
+
+<div>
+  <h5>Filtros:</h5>
+  <p>Bootcamp: {{bootcamp | async}}  |  Center: {{center | async}}  |  State: {{state | async}}  |  Order: {{order | async}}</p>
+</div> -->
+
+
+
+<!-- 
+<div class="col-4">
+  <div *ngFor="let project of projectsArray">
+    <img [src]="project.image" alt="">
+    <h3>{{project.title}}</h3>
+    
+  </div>
+</div> -->
+
+    <!-- PROJECTS -->
+    <section class="projectSection container padNormal sectionContainer">
+      <div class="projectsContainer">
+        <div class="projectBox container shadow" *ngFor="let project of projectsArray">
+          <div class="imageProject"> <img [src]="project.image" alt=""></div>
+          <div class="padNormal">
+            <div class="visualPart">
+              <div class="imageAuthorContainer">
+                <img class="imageAuthor" [src]="project.imageAuthor" alt="">
+              </div>
+              <div class="mainProjectDetails">
+                  <h5>{{project.author}} | {{project.title}}</h5>
+                  <p>{{project.objetive}}</p>
+                  <p class="center">{{project.bootcamp}}</p>
+              </div>
+            </div>
+
+            <p >{{project.description}}</p>
+          </div>
+          <div class="ui bottom attached button">
+            <i class="add icon"></i>
+            See more
+          </div>
+        </div>
+      </div>
+    </section>

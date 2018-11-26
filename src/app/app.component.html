@@ -1,1 +1,28 @@
-<router-outlet></router-outlet>
+<body>
+    <div class="wrapper">
+        <!-- HEADER -->
+        <div class="headerContainer ">
+            <div class="header container col-10">
+                <app-header-app></app-header-app>  
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="contentContainer container col-10">
+                <router-outlet></router-outlet>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, doloremque architecto placeat tempora deserunt iste eos animi, quae soluta totam expedita labore corporis officiis earum voluptas ullam, eaque eum exercitationem.</p>
+
+    
+        </div>
+            
+        <!-- FOOTER -->
+        <div class="footerContainer">
+                <div class="container col-10">
+                    <app-footer-main></app-footer-main> 
+                </div>
+        </div>
+        
+    </div>
+    
+</body>
+
