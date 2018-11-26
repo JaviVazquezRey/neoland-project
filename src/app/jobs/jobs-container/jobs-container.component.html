@@ -3,3 +3,29 @@
   <p>Bootcamp: {{bootcamp | async}}  |  Location: {{center | async}}  |  Company: {{company | async}} }}</p>
 </div> -->
 
+    <!-- JOBS -->
+    <section class="jobSection container padNormal sectionContainer">
+      <div class="jobsContainer">
+        <div class="jobBox container shadow" *ngFor="let job of jobsArray">
+          <div class="padNormal">
+            <div class="visualPart">
+              <div class="logoContainer">
+                <img class="logo" [src]="job.logo" alt="">
+              </div>
+              <div class="mainjobDetails">
+                  <h5>{{job.title}}</h5>
+                  <p class="map pin icon">Location: {{job.location}}</p>
+                  <p>{{job.shortDescription}}</p>
+                  <p>Contact mail: {{job.mail}}</p>
+              </div>
+            </div>
+
+            <p >{{job.description}}</p>
+          </div>
+          <div class="ui bottom attached button">
+            <i class="add icon"></i>
+            See more
+          </div>
+        </div>
+      </div>
+    </section>
