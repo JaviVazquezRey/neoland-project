@@ -1,7 +1,7 @@
-<!-- <div>
+<div>
   <h5>Filtros:</h5>
   <p>Bootcamp: {{bootcamp | async}}  |  Location: {{center | async}}  |  Company: {{company | async}} }}</p>
-</div> -->
+</div>
 
     <!-- JOBS -->
     <section class="jobSection container padNormal sectionContainer">
@@ -13,10 +13,10 @@
                 <img class="logo" [src]="job.logo" alt="">
               </div>
               <div class="mainjobDetails">
-                  <h5>{{job.title}}</h5>
-                  <p class="map pin icon">Location: {{job.location}}</p>
-                  <p>{{job.shortDescription}}</p>
-                  <p>Contact mail: {{job.mail}}</p>
+                  <h5 class="bolder darkBlue">{{job.title}}</h5>
+                  <p class="m-1"><i class="map marker alternate icon locationIcon"></i> {{job.location}}      |      {{job.date}}</p>
+                  <p class="m-1 pb-2">{{job.shortDescription}}</p>
+                  <p>Contact mail: <span class="bold darkBlue">{{job.mail}}</span></p>
               </div>
             </div>
 

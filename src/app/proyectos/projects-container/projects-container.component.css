@@ -37,6 +37,8 @@ img{
 .projectsContainer{
     align-content: center;
     text-align: center;
+    display: flex;
+    flex-flow: row wrap;
 }
 .projectsContainer:after{
     clear: both;
@@ -48,9 +50,9 @@ img{
     float: left;
     width: 32%;
     /*height: 390px;*/
-    height: 540px;
     margin: 0.44%;    
-
+    position: relative;
+    padding-bottom: 46px;
 }
 
 .imageProject img{
@@ -77,4 +79,9 @@ img{
 }
 .visualPart{
     margin-bottom: 15px;
+}
+.projectBox .button{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }

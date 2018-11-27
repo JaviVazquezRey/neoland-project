@@ -1,17 +1,30 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
+
 body{
     background: rgba(191, 186, 186, 0.289);
 }
 .container{
-    margin: 0% auto;
+         padding-right: 0px; 
+    padding-left: 0px; 
+}
+@media (max-width: 768px){
+    .container{
+        margin: 0px;
+       max-width: 100%;
+    }
+    .sectionContainer{
+        max-width: 100% !important;
+    }
+}
+
+@media (min-width: 576px){
+.container {
+    max-width: 100%;
+}
 }
 .headerContainer, .footerContainer{
     background-color: #2a2f50;
     color: white;
+    /* margin: 8.33%; */
 }
 .contentContainer{
     background: white;
