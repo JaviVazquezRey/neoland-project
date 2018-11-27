@@ -1,3 +1,23 @@
-.header{
+*{
+    font-family: brown;
+    font-weight: 100;
+ }
+
+ .header{
     background: lightcoral;
 }
+
+ .jumbotron{
+    padding: 0!important;
+    background-image: url(../images/mountains1.jpg);
+    height: 850px;
+    background-size: cover; /*easier to just have it cover the one hundred percent*/
+    color: white;
+    text-align: center;
+    width: 100%;
+ }
+
+ 
+ .headline{
+    padding-top: 150px !important;
+ }
