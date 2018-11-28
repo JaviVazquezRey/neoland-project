@@ -20,6 +20,7 @@ import { IAppState, rootReducer, INITIAL_STATE } from './store';
 import { JobsComponent } from './jobs/jobs.component';
 import { FilterJobsComponent } from './jobs/filter-jobs/filter-jobs.component';
 import { JobsContainerComponent } from './jobs/jobs-container/jobs-container.component';
+import { NetworkComponent } from './network/network.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { JobsContainerComponent } from './jobs/jobs-container/jobs-container.com
     ProjectsContainerComponent,
     JobsComponent,
     FilterJobsComponent,
-    JobsContainerComponent
+    JobsContainerComponent,
+    NetworkComponent
   ],
   imports: [
     BrowserModule,

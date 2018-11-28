@@ -4,6 +4,7 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { NetworkComponent } from './network/network.component';
 
 export const appRoutes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },  
@@ -12,7 +13,8 @@ export const appRoutes: Routes = [
     { path: 'perfil', component: PerfilComponent },
     { path: 'proyectos', component: ProyectosComponent },
     { path: 'empleo', component: JobsComponent },
-    { path: '**', component: LoginComponent },
+    { path: 'network', component: NetworkComponent},
+    { path: '**', component: LoginComponent }
 
 
 ]

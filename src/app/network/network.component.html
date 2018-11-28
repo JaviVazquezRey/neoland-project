@@ -1,0 +1,18 @@
+<!-- USERS -->
+<section class="userSection container padNormal sectionContainer">
+    <div class="usersContainer">
+      <div class="userBox container shadow" *ngFor="let user of usersArray">
+        <div class="imageuser"> <img [src]="user.urlimage" alt=""></div>
+        <div class="padNormal">
+          <div>
+            <div class="mainuserDetails">
+                <p class="fontSmall center">{{user.shortDescription}} | {{user.location}}</p>
+                <p class="center">{{user.bootcamp}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  

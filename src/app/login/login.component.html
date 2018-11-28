@@ -20,17 +20,28 @@
 -->
 
 
-<!--CONTENT-->
+<!--CONTENT
+
+the header for this page should not have any of the nav bar visible (no log out, no search bar etc)
+-->
 
 
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-      <h1 class="headline display-4 p-5">Create, Collaborate</h1>
-      <p class="lead">this is a description of the enterprise social network we've made. Feel free to fork this on GitHub</p>
-      <hr class="my-4">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="intro col-6 row-height">
+        <h1 class="headline display-4 p-5">Create, Collaborate</h1>
+        <p class="p-3 lead">this is a description of the enterprise social network we've made. Feel free to fork this on GitHub</p>
+        <hr class="p-3 my-4">
+        <p class="pl-3 pr-3">It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      </div>
+      <div class="log col-6 row-height">
+        <p class="mt-5 text-center">Log in</p> 
+        <button type="button" class="login mt-5 btn btn-primary">Sign up</button>
+       <!-- <button type="button" class="sign btn btn-light">Log in</button> -->
+      </div>
+    </div>
   </div>
-</div>
+
 
 
 

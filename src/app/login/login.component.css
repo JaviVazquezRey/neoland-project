@@ -1,5 +1,5 @@
 *{
-    font-family: brown;
+    font-family: 'Lato', sans-serif;
     font-weight: 100;
  }
 
@@ -10,6 +10,7 @@
  .jumbotron{
     padding: 0!important;
     background-image: url(../images/mountains1.jpg);
+    background: #1da1f2;
     height: 850px;
     background-size: cover; /*easier to just have it cover the one hundred percent*/
     color: white;
@@ -17,7 +18,30 @@
     width: 100%;
  }
 
+ .log{
+     background-color: white;
+     color: black;
+     text-align: center;
+ }
  
+ .intro{
+    background-color: #1da1f2;
+    color: white;
+ }
+
  .headline{
     padding-top: 150px !important;
+ }
+
+ h1{
+     font-family: 'brown';
+     font-weight: 100;
+ }
+
+ .login{
+     background-color: #1da1f2;
+ }
+
+ .sign{
+     color: #1da1f2;
  }
