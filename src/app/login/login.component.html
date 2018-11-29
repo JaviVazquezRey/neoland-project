@@ -28,16 +28,45 @@ the header for this page should not have any of the nav bar visible (no log out,
 
   <div class="container-fluid">
     <div class="row">
-      <div class="intro col-6 row-height">
-        <h1 class="headline display-4 p-5">Create, Collaborate</h1>
+      <div class="intro col-lg-6 col-md-6 col-sm-12 col-xs-12 row-height">
+        <h1 class="mt-5 display-4 p-5">Create, Collaborate</h1>
         <p class="p-3 lead">this is a description of the enterprise social network we've made. Feel free to fork this on GitHub</p>
         <hr class="p-3 my-4">
-        <p class="pl-3 pr-3">It uses utility classes for typography and spacing to space content out within the larger container.</p>
       </div>
-      <div class="log col-6 row-height">
-        <p class="mt-5 text-center">Log in</p> 
-        <button type="button" class="login mt-5 btn btn-primary">Sign up</button>
-       <!-- <button type="button" class="sign btn btn-light">Log in</button> -->
+      <div class="log col-lg-6 col-md-6 col-sm-12 col-xs-12 row-height text-center">
+        <p class="mt-5 text-center">Join NAMESITE today.</p>
+        <div>
+          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+            <input matInput placeholder="name">
+          </mat-form-field>
+         
+          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+            <input type="email" matInput placeholder="email">
+          </mat-form-field>
+         
+          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+            <input matInput placeholder="username">
+          </mat-form-field>
+         
+          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+            <input matInput type="password" placeholder="password">
+          </mat-form-field>
+         
+          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+            <input matInput type="password" placeholder="confirm password">
+          </mat-form-field>
+         </div>
+         <div>
+          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+            <input matInput placeholder="username">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+            <input matInput type="password" placeholder="password">
+          </mat-form-field>
+         </div>
+        <button type="button" class="signbtn mt-5 btn btn-primary">Sign up</button>
+        <button type="button" class="loginbtn btn btn-light">Log in</button>
       </div>
     </div>
   </div>
