@@ -4,6 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { NgReduxModule, NgRedux, DevToolsExtension } from '@angular-redux/store';
+import { HttpModule } from '@angular/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -45,7 +47,9 @@ import { NetworkComponent } from './network/network.component';
     MatFormFieldModule,
     MatInputModule,
     RouterModule.forRoot(appRoutes),
-    NgReduxModule
+    NgReduxModule,
+    HttpModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

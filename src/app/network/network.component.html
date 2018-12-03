@@ -1,18 +1,104 @@
 <!-- USERS -->
 <section class="userSection container padNormal sectionContainer">
     <div class="usersContainer">
-      <div class="userBox container shadow" *ngFor="let user of usersArray">
+      <div class="userBox container shadow" *ngFor="let user of usersArray" (click)="visitProfile(user.id)">
         <div class="imageuser"> <img [src]="user.urlimage" alt=""></div>
         <div class="padNormal">
           <div>
             <div class="mainuserDetails">
-                <p class="fontSmall center">{{user.shortDescription}} | {{user.location}}</p>
-                <p class="center">{{user.bootcamp}}</p>
+              <h3>{{user.alias}}</h3>
+              <p class="fontSmall center">{{user.shortDescription}} | {{user.location}}</p>
+              <p class="center">{{user.bootcamp}}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <form
+    [formGroup]="formNewUser"
+    (ngSubmit)="onSubmit()">
+
+    <p>
+      <label for="name">Name</label>
+      <input type="text" formControlName="name">
+    </p>
+    <p>
+        <label for="surname">Surname</label>
+        <input type="text" formControlName="surname">
+    </p>
+    <p>
+        <label for="email">Email</label>
+        <input type="text" formControlName="email">
+    </p>
+    <p>
+        <label for="password">Password</label>
+        <input type="text" formControlName="password">
+    </p>
+    <p>
+        <label for="date">Date</label>
+        <input type="text" formControlName="date">
+    </p>
+    <p>
+        <label for="urlimage">image</label>
+        <input type="text" formControlName="urlimage">
+    </p>
+    <p>
+        <label for="location">Location</label>
+        <input type="text" formControlName="location">
+    </p>
+    <p>
+        <label for="alias">Alias</label>
+        <input type="text" formControlName="alias">
+    </p>
+    <p>
+        <label for="linkFacebook">Link FB</label>
+        <input type="text" formControlName="linkFacebook">
+    </p>
+    <p>
+        <label for="linkGithub">Link Github</label>
+        <input type="text" formControlName="linkGithub">
+    </p>
+    <p>
+        <label for="linkLinkedin">Link Linkedin</label>
+        <input type="text" formControlName="linkLinkedin">
+    </p>
+    <p>
+        <label for="linkMedium">Link Medium</label>
+        <input type="text" formControlName="linkMedium">
+    </p>
+    <p>
+        <label for="linkYoutube">Link Youtube</label>
+        <input type="text" formControlName="linkYoutube">
+    </p>
+    <p>
+        <label for="linkOthers">Link others</label>
+        <input type="text" formControlName="linkOthers">
+    </p>    
+    <p>
+        <label for="shortDescription">Short description</label>
+        <input type="text" formControlName="shortDescription">
+    </p>
+    <p>
+        <label for="description">description</label>
+        <input type="text" formControlName="description">
+    </p>
+    <p>
+        <label for="education">Education</label>
+        <input type="text" formControlName="education">
+    </p>    
+    <p>
+        <label for="experience">Experience</label>
+        <input type="text" formControlName="experience">
+    </p>
+    <p>
+        <label for="otherInformation">Other</label>
+        <input type="text" formControlName="otherInformation">
+    </p>
+
+    <p><input type="submit" value="Sign up!"></p>
+
+    </form>
   </section>
 
   

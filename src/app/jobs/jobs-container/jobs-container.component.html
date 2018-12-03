@@ -6,8 +6,9 @@
     <!-- JOBS -->
     <section class="jobSection container padNormal sectionContainer">
       <div class="jobsContainer">
-        <div class="jobBox container shadow" *ngFor="let job of jobsArray">
-          <div class="padNormal">
+        <div class="jobBox container shadow" *ngFor="let job of jobsArray" (click)="irALinkOferta(job.linkWebsite)" href="job.linkWebsite" target="_blank">
+          <a href="job.linkWebsite" target="blank">
+            <div class="padNormal">
             <div class="visualPart">
               <div class="logoContainer">
                 <img class="logo" [src]="job.logo" alt="">
@@ -16,12 +17,13 @@
                   <h5 class="bolder darkBlue">{{job.title}}</h5>
                   <p class="m-1"><i class="map marker alternate icon locationIcon"></i> {{job.location}}      |      {{job.date}}</p>
                   <p class="m-1 pb-2">{{job.shortDescription}}</p>
-                  <p>Contact mail: <span class="bold darkBlue">{{job.mail}}</span></p>
+                  <p>Contact mail: <span class="bold darkBlue">{{job.contactEmail}}</span></p>
               </div>
             </div>
 
             <p >{{job.description}}</p>
           </div>
+          </a> 
           <div class="ui bottom attached button">
             <i class="add icon"></i>
             See more
