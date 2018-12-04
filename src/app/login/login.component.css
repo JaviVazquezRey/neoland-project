@@ -7,17 +7,6 @@
     background: lightcoral;
 }
 
- .jumbotron{
-    padding: 0!important;
-    background-image: url(../images/mountains1.jpg);
-    background: #1da1f2;
-    height: 850px;
-    background-size: cover; /*easier to just have it cover the one hundred percent*/
-    color: white;
-    text-align: center;
-    width: 100%;
- }
-
  .log{
      background-color: white;
      color: black;
@@ -29,19 +18,43 @@
     color: white;
  }
 
- .headline{
-    padding-top: 150px !important;
- }
+ @media screen and (max-width: 768px) {
+    h1{
+        font-size: 20px;
+    }
+}
 
  h1{
      font-family: 'brown';
      font-weight: 100;
  }
+ 
+ .button{
+    align-items: center;
+}
 
- .login{
+ .signbtn{
      background-color: #1da1f2;
+     padding: 5px 150px;
+     border-radius: 20px;
+     display:block;
+     font-size: medium;
+     margin: auto;
  }
 
- .sign{
+ .loginbtn{
      color: #1da1f2;
+     padding: 5px 150px;
+     border-radius: 20px;
+     display:block;
+     font-size: medium;
+     margin: 15px auto;
  }
+
+ .login:hover{
+    background-color: #0084b4  !important;
+}
+
+.sign:hover{
+    background-color: #0084b4  !important;
+}

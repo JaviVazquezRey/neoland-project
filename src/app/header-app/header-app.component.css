@@ -58,3 +58,7 @@
     color: #0084b4  !important;
     border-bottom: 4px solid #0084b4;
 }
+
+.briefcase:hover{
+    color: #0084b4  !important;
+}

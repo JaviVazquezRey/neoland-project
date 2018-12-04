@@ -1,7 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatButtonModule,      
+  MatMenuModule,      
+  MatToolbarModule,      
+  MatIconModule,      
+  MatCardModule,      
+  MatFormFieldModule,      
+  MatInputModule,      
+  MatDatepickerModule,      
+  MatNativeDateModule,      
+  MatRadioModule,      
+  MatSelectModule,      
+  MatOptionModule,      
+  MatSlideToggleModule      
+} from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { NgReduxModule, NgRedux, DevToolsExtension } from '@angular-redux/store';
 import { HttpModule } from '@angular/http';
@@ -46,6 +59,17 @@ import { NetworkComponent } from './network/network.component';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatButtonModule,      
+    MatMenuModule,      
+    MatToolbarModule,      
+    MatIconModule,      
+    MatCardModule,
+    MatDatepickerModule,      
+    MatNativeDateModule,      
+    MatRadioModule,      
+    MatSelectModule,      
+    MatOptionModule,      
+    MatSlideToggleModule,
     RouterModule.forRoot(appRoutes),
     NgReduxModule,
     HttpModule,
