@@ -27,4 +27,7 @@ export class ApiService {
   newProject(values){
     return this.http.post(`${this.baseUrl}/projects`, values).toPromise()
   }
+  login(userLogin) {
+    return this.http.post(`${this.baseUrl}/users/login`, userLogin).toPromise()
+  }
 }

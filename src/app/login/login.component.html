@@ -36,6 +36,23 @@ the header for this page should not have any of the nav bar visible (no log out,
       </div>
       <div class="log col-6 row-height">
         <p class="mt-5 text-center">Log in</p> 
+
+        <form 
+        [formGroup]="formLogin"
+        (ngSubmit)="onSubmit()">
+          <p>
+            <label for="email">Email</label>
+            <input type="text" formControlName="email">
+          </p>
+          <p>
+              <label for="password">Password</label>
+              <input type="text" formControlName="password">
+          </p>
+      
+          <p><input type="submit" value="Palante!"></p>
+        </form>
+
+
         <button type="button" class="login mt-5 btn btn-primary">Sign up</button>
        <!-- <button type="button" class="sign btn btn-light">Log in</button> -->
       </div>
