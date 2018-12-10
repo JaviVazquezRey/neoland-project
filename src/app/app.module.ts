@@ -36,6 +36,7 @@ import { JobsComponent } from './jobs/jobs.component';
 import { FilterJobsComponent } from './jobs/filter-jobs/filter-jobs.component';
 import { JobsContainerComponent } from './jobs/jobs-container/jobs-container.component';
 import { NetworkComponent } from './network/network.component';
+import { UserNetworkComponent } from './network/user-network/user-network.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { NetworkComponent } from './network/network.component';
     JobsComponent,
     FilterJobsComponent,
     JobsContainerComponent,
-    NetworkComponent
+    NetworkComponent,
+    UserNetworkComponent
   ],
   imports: [
     BrowserModule,

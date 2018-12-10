@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '../../../node_modules/@angular/router';
 @Component({
   selector: 'app-network',
   templateUrl: './network.component.html',
@@ -11,7 +12,7 @@ export class NetworkComponent implements OnInit {
   usersArray: any[]
   formNewUser: FormGroup;
 
-  constructor(private apiService: ApiService) { 
+  constructor(private apiService: ApiService, private router: Router) { 
     this.formNewUser = new FormGroup({
       name: new FormControl(''),
       surname: new FormControl(''),
@@ -23,6 +24,7 @@ export class NetworkComponent implements OnInit {
       alias: new FormControl(''),
       linkFacebook: new FormControl(''),
       linkGithub: new FormControl(''),
+      linkLinkedin: new FormControl(''),
       linkMedium: new FormControl(''),
       linkYoutube: new FormControl(''),
       linkOthers: new FormControl(''),
@@ -240,8 +242,9 @@ export class NetworkComponent implements OnInit {
   }
   visitProfile(idUser) {
     console.log(idUser)
-    this.apiService.getUserById(idUser).then((res) => {
-      console.log(res.json())
-    })
+    // this.apiService.getUserById(idUser).then((res) => {
+    //   console.log(res.json())
+    // })
+    this.router.navigate(['network/', idUser])
   }
 }

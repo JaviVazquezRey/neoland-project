@@ -31,6 +31,9 @@ img{
 .center{
     text-align: center;
 }
+.left{
+    text-align: left;
+}
 .shadow{
     box-shadow: 7px 10px 15px #2a2f50 !important;
 }

@@ -1,1 +1,60 @@
+<form 
+    [formGroup]="formNewPost"
+    (ngSubmit)="onSubmit()">
+    <p>
+        <label for="title">Title</label>
+        <input type="text" formControlName="title">
+    </p>
+    <p>
+        <label for="fkUser">fkUser</label>
+        <input type="text" formControlName="fkUser">
+    </p>
+    <p>
+        <label for="date">date</label>
+        <input type="text" formControlName="date">
+    </p>
+    <p>
+        <label for="content">content</label>
+        <input type="text" formControlName="content">
+    </p>
+    <p>
+        <label for="image">image</label>
+        <input type="text" formControlName="image">
+    </p>
+    <p>
+        <label for="video">video</label>
+        <input type="text" formControlName="video">
+    </p>
+    <p>
+        <label for="links">links</label>
+        <input type="text" formControlName="links">
+    </p>
+    <p>
+   
+    <p><input type="submit" value="Post!"></p>
 
+</form>
+
+
+    <!-- postS -->
+    <section class="postSection container padNormal sectionContainer">
+        <div class="postsContainer">
+            <div class="postBox container shadow" *ngFor="let post of postsArray">
+                <a>
+                    <div class="padNormal">
+                        <div class="visualPart">
+                            <div class="imageUserContainer">
+                                <img class="imageUser" [src]="post.urlimage" alt="">
+                            </div>
+                            <div class="mainpostDetails">
+                                <h5 class="bolder darkBlue">{{post.alias}}</h5>
+                                <p> {{post.location}} | {{post.date}}</p>
+                                <p>{{post.content}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+    
+            </div>
+        </div>
+    </section>

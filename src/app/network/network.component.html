@@ -1,7 +1,8 @@
+<router-outlet></router-outlet>
 <!-- USERS -->
 <section class="userSection container padNormal sectionContainer">
     <div class="usersContainer">
-      <div class="userBox container shadow" *ngFor="let user of usersArray" (click)="visitProfile(user.id)">
+      <div class="userBox container shadow" *ngFor="let user of usersArray" (click)="visitProfile(user.id)" >
         <div class="imageuser"> <img [src]="user.urlimage" alt=""></div>
         <div class="padNormal">
           <div>
@@ -15,7 +16,7 @@
       </div>
     </div>
 
-    <form
+<form
     [formGroup]="formNewUser"
     (ngSubmit)="onSubmit()">
 

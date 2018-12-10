@@ -11,9 +11,12 @@
       <a class="item itemHeader p-2" [routerLink]="['home']">
           <i class="home icon"></i> Home
       </a>
-      <!--<a class="item itemHeader p-2" [routerLink]="['perfil']">
+      <a class="item itemHeader p-2" [routerLink]="['perfil']">
           <i class=""></i> Profile
-      </a>-->        
+      </a>
+      <a class="item itemHeader p-2" [routerLink]="['network']">
+          <i class=""></i> Network
+      </a>                
       <a class="item itemHeader p-2" [routerLink]="['proyectos']">
           <i class="images outline icon"></i> Projects
       </a>
@@ -40,6 +43,8 @@
   <div class="right item row">
     <div class="ui input">
       <button class="ui button logOutButton">U</button>
+      <button class="ui button logOutButton" (click)="logOut()">Logout</button>
+
     </div>
   </div>
 </div>

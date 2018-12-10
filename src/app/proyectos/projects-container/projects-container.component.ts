@@ -65,6 +65,7 @@ export class ProjectsContainerComponent implements OnInit {
         this.apiService.getProjects().then((res) => {
           console.log(res.json())
           this.projectsArray = res.json()
+          
     
         })
       }
@@ -73,9 +74,9 @@ export class ProjectsContainerComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.getProjects().then((res) => {
-      console.log(res.json())
+      // console.log(res.json())
       this.projectsArray = res.json()
-
+      // console.log(this.projectsArray)
     })
   }
 

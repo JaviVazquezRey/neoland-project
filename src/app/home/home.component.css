@@ -1,0 +1,90 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: #2a2f50;
+}
+img{
+    cursor: pointer;
+    max-height: 250px;
+}
+
+/* GENERAL */
+.container{
+    background: white;
+    border: 3px solid #2a2f50;
+    border-radius: 15px;
+    /*padding: 12px;*/
+}
+.padNormal{
+    padding: 12px;
+}
+
+.floatLeft{
+    float: left;
+}
+.sectionContainer{
+    margin: 25px 0px;
+    box-shadow: 7px 10px 15px #2a2f50;
+}
+.center{
+    text-align: center;
+}
+.shadow{
+    box-shadow: 7px 10px 15px #2a2f50 !important;
+}
+.bold{
+    font-weight: bolder;
+}
+.darkBlue{
+    color: #2a2f50;
+}
+/* postS */
+.postsContainer{
+    align-content: center;
+    text-align: center;
+}
+.postsContainer:after{
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.postBox{
+    float: left;
+    width: 98%;
+    /*height: 390px;*/
+    margin: 0.44%;    
+
+}
+
+.imagepost img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.imageUserContainer{
+    margin: 0%;
+    background-color: green;
+    overflow: visible;
+    width: 7%;
+}
+.imageUser{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    float: left;
+}
+.mainpostDetails{
+    float: left;
+    width: 88%;
+    margin-left: 10px;
+    text-align: left;
+}
+/* .locationIcon{
+    font-size: 10px;
+} */
+.visualPart{
+    margin-bottom: 10px;
+}

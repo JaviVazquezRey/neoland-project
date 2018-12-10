@@ -1,0 +1,117 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+}
+img{
+    cursor: pointer;
+}
+
+/* GENERAL */
+.container{
+    background: white;
+    border: 3px solid #2a2f50;
+    border-radius: 15px;
+    /*padding: 12px;*/
+}
+
+
+@media (min-width: 576px){
+    .container {
+        max-width: 100%;
+    }
+}
+
+.padNormal{
+    padding: 12px;
+}
+
+.floatLeft{
+    float: left;
+}
+.sectionContainer{
+    margin: 25px 0px;
+    box-shadow: 7px 10px 15px #2a2f50;
+}
+.center{
+    text-align: center;
+}
+/* VISUAL */
+.visual{
+    background-image: url("../../../assets/images/fondo_javi.png");
+    background-repeat: cover;
+    padding-bottom: 50px; 
+    padding: 20px;
+    box-shadow: 7px 10px 15px #2a2f50;   
+}
+.visual:after{
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.visual .photoUser{
+    width: 150px;
+    height: 150px;
+    border: 3px solid #2a2f50;
+    border-radius: 50%;
+    box-shadow: 7px 10px 15px #2a2f50;
+    float: left;
+}
+.presentationContent{
+    width: 70%;
+    float: left;
+    margin-left: 15px;
+}
+.presentationContent div{
+    background: white;
+    border: 3px solid #2a2f50;
+    box-shadow: 7px 10px 15px #2a2f50;
+    border-radius: 15px;
+}
+.presentationContent .nameContainer{
+    min-width: 15%; 
+    max-width: 60%;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+.presentationContent .shorPresentation{
+    padding: 12px;
+}
+
+
+/* POSTS */
+.imagePost{
+    width: 100%;
+    height: 100%;
+}
+h2{
+    margin-bottom: 15px;
+}
+.postContainer{
+    margin: auto;
+    padding: 0%; 
+    margin-bottom: 15px;
+}
+.postContainer img{
+    width: 100%;
+    background: lightcoral;
+}
+
+/* PROJECTS */
+.projectsContainer:after{
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.projectBox{
+    float: left;
+    margin-right: 20px; 
+}
+
+.imageProject img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}

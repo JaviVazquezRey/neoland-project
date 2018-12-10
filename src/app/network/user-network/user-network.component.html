@@ -1,0 +1,67 @@
+<div class="mainContent">
+  <div class="visual">
+    <img class="photoUser" [src]="user.urlimage">
+    
+    <div class="presentationContent">
+      <div class="nameContainer">
+        <h4>{{user.alias}}</h4>
+        <p>{{user.shortDescription}}</p>
+      </div>
+      <div class="shorPresentation">
+        <p>{{user.description}}</p>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="nonVisual">
+    
+    
+    <!-- POSTS -->
+    <section class="postsListContainer container padNormal sectionContainer">
+        <div class="">
+            <h2>Actividades y Posts</h2>
+            <div class="postContainer container row padNormal" *ngFor="let post of postsArray">
+              <div class="imageContainer floatLeft col-2">
+                <img class="imagePost" [src]="post.image">
+              </div>
+              <div class="content padNormal row col-10">
+                <h4>{{post.title}}</h4>
+                <h5>{{post.subtitle}}</h5>
+                <div class="description">
+                  <p>{{post.content}}</p>
+                </div>
+                <div class="extra">
+                  Bootcamp: {{post.author}}
+                </div>
+              </div>
+            </div>
+          
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section class="projectSection container padNormal sectionContainer">
+      <h2>Projects</h2>
+      <div class="projectsContainer">
+        <div class="projectBox container col-2" *ngFor="let project of projectsArray">
+          <div class="imageProject"> <img [src]="project.image" alt=""></div>
+          <div class="padNormal">
+            <h4>{{project.title}}</h4>
+            <p>{{project.objetive}}</p>
+            <p class="center">{{project.bootcamp}}</p>
+            <p *ngIf="mostrarProjectDescription">{{project.description}}</p>
+          </div>
+          <div class="ui bottom attached button">
+            <i class="add icon"></i>
+            See more
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+
+</div>

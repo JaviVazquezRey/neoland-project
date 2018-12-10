@@ -24,7 +24,7 @@
     box-shadow: none;
     margin: 0 auto;
     border-left: 0px;
-    background: white;
+    background: #2a2f50;
     color: grey;
 }
 .ui.menu .item:before {
@@ -51,14 +51,17 @@
 }
 .itemHeader{
     border: 4px solid transparent;
-    padding: 5px 0px; 
-    color: grey !important;
+    padding: 5px 12px !important; 
+    color: rgb(220, 216, 216) !important;
+    font-weight: bold;
+    border-left: 1px solid transparent !important;
+    border-right: 1px solid transparent !important;
 }
 .itemHeader:hover{
-    color: #0084b4  !important;
-    border-bottom: 4px solid #0084b4;
+    color: #c7ab09  !important;
+    border-bottom: 4px solid #c7ab09;
 }
 
 .briefcase:hover{
-    color: #0084b4  !important;
+    color: #c7ab09  !important;
 }

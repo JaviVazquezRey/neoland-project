@@ -21,7 +21,6 @@ export interface IAppState{
     }
 
 }
-export interface IAppState2{}
 
 export const INITIAL_STATE: IAppState = {
     // bootcampType: 'allBootcamps',
