@@ -2,3 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+i.icon{
+    height: auto !important;
+}

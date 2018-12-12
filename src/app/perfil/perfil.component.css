@@ -15,6 +15,10 @@ img{
     /*padding: 12px;*/
 }
 
+i.icon{
+    height: auto !important;
+}
+
 
 @media (min-width: 576px){
     .container {
@@ -49,6 +53,9 @@ img{
     content: '';
     display: block;
 }
+.visual>div{
+    float: left;
+}
 
 .visual .photoUser{
     width: 150px;
@@ -58,9 +65,12 @@ img{
     box-shadow: 7px 10px 15px #2a2f50;
     float: left;
 }
+.containerLinks li{
+    display:inline-block;
+}
+
 .presentationContent{
     width: 70%;
-    float: left;
     margin-left: 15px;
 }
 .presentationContent div{

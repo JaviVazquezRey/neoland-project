@@ -79,7 +79,7 @@ the header for this page should not have any of the nav bar visible (no log out,
         </p>
         <p>
             <label for="urlimage">image</label>
-            <input type="text" formControlName="urlimage">
+            <input type="file" (change)="onFileChange($event)" formControlName="urlimage">
         </p>
         <p>
             <label for="location">Location</label>

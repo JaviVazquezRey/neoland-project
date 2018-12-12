@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
   getPosts() {
     this.apiService.getPosts().then((res) => {
       this.postsArray = res.json()
+      this.postsArray.reverse()
     })
   }
 
