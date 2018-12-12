@@ -10,30 +10,30 @@ import { Router } from '../../../node_modules/@angular/router';
 export class NetworkComponent implements OnInit {
   
   usersArray: any[]
-  formNewUser: FormGroup;
+  // formNewUser: FormGroup;
 
   constructor(private apiService: ApiService, private router: Router) { 
-    this.formNewUser = new FormGroup({
-      name: new FormControl(''),
-      surname: new FormControl(''),
-      email: new FormControl(''),
-      password: new FormControl(''),
-      date: new FormControl(''),
-      urlimage: new FormControl(''),
-      location: new FormControl(''),
-      alias: new FormControl(''),
-      linkFacebook: new FormControl(''),
-      linkGithub: new FormControl(''),
-      linkLinkedin: new FormControl(''),
-      linkMedium: new FormControl(''),
-      linkYoutube: new FormControl(''),
-      linkOthers: new FormControl(''),
-      shortDescription: new FormControl(''),
-      description: new FormControl(''),
-      education: new FormControl(''),
-      experience: new FormControl(''),
-      otherInformation: new FormControl('')
-    })
+    // this.formNewUser = new FormGroup({
+    //   name: new FormControl(''),
+    //   surname: new FormControl(''),
+    //   email: new FormControl(''),
+    //   password: new FormControl(''),
+    //   date: new FormControl(''),
+    //   urlimage: new FormControl(''),
+    //   location: new FormControl(''),
+    //   alias: new FormControl(''),
+    //   linkFacebook: new FormControl(''),
+    //   linkGithub: new FormControl(''),
+    //   linkLinkedin: new FormControl(''),
+    //   linkMedium: new FormControl(''),
+    //   linkYoutube: new FormControl(''),
+    //   linkOthers: new FormControl(''),
+    //   shortDescription: new FormControl(''),
+    //   description: new FormControl(''),
+    //   education: new FormControl(''),
+    //   experience: new FormControl(''),
+    //   otherInformation: new FormControl('')
+    // })
     // this.usersArray = [
     //   {
     //     id: 1,
@@ -217,22 +217,22 @@ export class NetworkComponent implements OnInit {
     //   }
     // ]
   }
-  onSubmit() {
-    console.log(this.formNewUser.value) 
-    this.apiService.newUser(this.formNewUser.value).then((res) => {
-      console.log(res.json())
+  // onSubmit() {
+  //   console.log(this.formNewUser.value) 
+  //   this.apiService.newUser(this.formNewUser.value).then((res) => {
+  //     console.log(res.json())
       
-      const response = res.json()
-      if (response.error) {
-        alert(response.error)
-      }
-      else {
-        this.apiService.getUsers().then((res) => {
-          this.usersArray = res.json()
-        })
-      }
-    })
-  }
+  //     const response = res.json()
+  //     if (response.error) {
+  //       alert(response.error)
+  //     }
+  //     else {
+  //       this.apiService.getUsers().then((res) => {
+  //         this.usersArray = res.json()
+  //       })
+  //     }
+  //   })
+  // }
 
   ngOnInit() {
     this.apiService.getUsers().then((res) => {
