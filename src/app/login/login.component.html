@@ -78,34 +78,34 @@ the header for this page should not have any of the nav bar visible (no log out,
             <input type="text" formControlName="date">
         </p>
         <p>
-            <label for="urlimage">image</label>
-            <input type="text" formControlName="urlimage">
+            <label for="urlimage">Profile Picture</label>
+            <input type="file" (change)="onFileChange($event)" formControlName="urlimage">
         </p>
         <p>
             <label for="location">Location</label>
             <input type="text" formControlName="location">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="alias">Alias</label>
             <input type="text" formControlName="alias">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="linkFacebook">Link FB</label>
             <input type="text" formControlName="linkFacebook">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="linkGithub">Link Github</label>
             <input type="text" formControlName="linkGithub">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="linkLinkedin">Link Linkedin</label>
             <input type="text" formControlName="linkLinkedin">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="linkMedium">Link Medium</label>
             <input type="text" formControlName="linkMedium">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="linkYoutube">Link Youtube</label>
             <input type="text" formControlName="linkYoutube">
         </p>
@@ -113,23 +113,23 @@ the header for this page should not have any of the nav bar visible (no log out,
             <label for="linkOthers">Link others</label>
             <input type="text" formControlName="linkOthers">
         </p>    
-        <p>
+        <p  style="display: none">
             <label for="shortDescription">Short description</label>
             <input type="text" formControlName="shortDescription">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="description">description</label>
             <input type="text" formControlName="description">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="education">Education</label>
             <input type="text" formControlName="education">
         </p>    
-        <p>
+        <p  style="display: none">
             <label for="experience">Experience</label>
             <input type="text" formControlName="experience">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="otherInformation">Other</label>
             <input type="text" formControlName="otherInformation">
         </p>
@@ -143,30 +143,38 @@ the header for this page should not have any of the nav bar visible (no log out,
 
         <button type="button" class="login mt-5 btn btn-primary">Sign up</button>
        <!- <button type="button" class="sign btn btn-light">Log in</button> -->
-     <!-- <div class="log col-lg-6 col-md-6 col-sm-12 col-xs-12 row-height text-center">
+     <div class="log col-lg-6 col-md-6 col-sm-12 col-xs-12 row-height text-center">
         <p class="mt-5 text-center">Join NAMESITE today.</p>
-        <div>
+        <!--*ngIf="signupmodel" add this to form-->
+        <form class="animateif" [formGroup]="formNewUser"
+        (ngSubmit)="onSubmitSignup()">
           <mat-form-field class="example-full-width" floatLabel="never" color="primary">
-            <input matInput placeholder="name">
+            <input matInput placeholder="name" formControlName="name">
           </mat-form-field>
          
           <mat-form-field class="example-full-width" floatLabel="never" color="primary">
-            <input type="email" matInput placeholder="email">
+            <input matInput placeholder="surname" formControlName="surname">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+            <input type="email" matInput placeholder="email" formControlName="email">
           </mat-form-field>
          
           <mat-form-field class="example-full-width" floatLabel="never" color="primary">
-            <input matInput placeholder="username">
+            <input matInput placeholder="alias">
           </mat-form-field>
          
           <mat-form-field class="example-full-width" floatLabel="never" color="primary">
-            <input matInput type="password" placeholder="password">
+            <input matInput type="password" placeholder="password" formControlName="password">
           </mat-form-field>
          
           <mat-form-field class="example-full-width" floatLabel="never" color="primary">
             <input matInput type="password" placeholder="confirm password">
           </mat-form-field>
-         </div>
-         <div>
+          <br>
+          <button mat-raised-button>Sign Up!</button>
+        </form>
+         <form class="animateif" *ngIf="loginmodel" [formGroup]="formLogin" (ngSubmit)="onSubmitLogin()">
           <mat-form-field class="example-full-width" floatLabel="never" color="primary">
             <input matInput placeholder="username">
           </mat-form-field>
@@ -174,12 +182,13 @@ the header for this page should not have any of the nav bar visible (no log out,
           <mat-form-field class="example-full-width" floatLabel="never" color="primary">
             <input matInput type="password" placeholder="password">
           </mat-form-field>
-         </div>
+
+        </form>
         <button type="button" class="signbtn mt-5 btn btn-primary">Sign up</button>
         <button type="button" class="loginbtn btn btn-light">Log in</button>
       </div>
     </div>
-  </div> -->
+  </div>
 
 
 
@@ -222,9 +231,6 @@ the header for this page should not have any of the nav bar visible (no log out,
     </mat-form-field>
  </div>
 </div>
-
 -->
-
-
 
 <!--FOOTER-->

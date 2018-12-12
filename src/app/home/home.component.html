@@ -36,8 +36,26 @@
 </form>
 
 
+
+
     <!-- postS -->
+
+    <!--need to add this to container for FEED-->
+    <div class="containerCompose">
+        <img src="../../assets/images/foto_linkedin_javi.png" alt="">
+        <div class="posting" name="posting" method="post" enctype="multipart/form-data">
+            <textarea class="composePost" placeholder="Compose post..."></textarea>
+            <button class="ui button">Post</button>
+        </div>
+    </div>
+    <div class="postsHeading">
+            <h3 class="panelTitle">Latest Posts</h3>
+    </div>
+    
+
+
     <section class="postSection container padNormal sectionContainer">
+
         <div class="postsContainer">
             <div class="postBox container shadow" *ngFor="let post of postsArray">
                 <a>

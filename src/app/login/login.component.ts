@@ -5,6 +5,9 @@ import { ApiService } from '../api.service';
 import { strictEqual } from 'assert';
 import { stringify } from 'querystring';
 import { Router } from '../../../node_modules/@angular/router';
+import { HttpClient, HttpHeaders, HttpRequest } from "@angular/common/http";
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,6 +18,9 @@ export class LoginComponent implements OnInit {
   formLogin: FormGroup
   formNewUser: FormGroup
   idUsuarioLogado: number
+  signupmodel: boolean
+  loginmodel: boolean
+  files; 
 
   constructor(private apiService: ApiService, private router: Router) { 
     this.formLogin = new FormGroup({
@@ -44,6 +50,9 @@ export class LoginComponent implements OnInit {
       experience: new FormControl(''),
       otherInformation: new FormControl('')
     })
+
+    this.signupmodel = false;
+    this.loginmodel = false;
   }
 
   onSubmitLogin() {
@@ -55,8 +64,10 @@ export class LoginComponent implements OnInit {
       console.log(this.idUsuarioLogado)
       localStorage.setItem("idUsuarioLogado", JSON.stringify(this.idUsuarioLogado))
       this.router.navigate(['/home']);
+      this.signupmodel = true;
 
     })
+
   }
 
   onSubmitSignup() {
@@ -74,6 +85,12 @@ export class LoginComponent implements OnInit {
       }
 
     })
+    this.signupmodel = true;
+
+  }
+
+  onFileChange($event) {
+    this.files = $event.target.files;
   }
 
 

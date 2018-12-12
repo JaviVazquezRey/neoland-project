@@ -41,6 +41,45 @@ img{
     color: #2a2f50;
 }
 /* postS */
+
+.postsHeading{
+    border-color: #ddd;
+    background-color: #f5f5f5;
+    color: black;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    width: 500px;
+    margin-left: 300px;
+}
+
+.containerCompose{
+    background-color: rgb(229, 242, 247);
+    border: 1px solid #e6ecf0;
+    padding: 10px 12px;
+    width: 500px;
+    margin-left: 300px;
+    align-content: center;
+}
+
+.containerCompose textarea{
+    border-radius: 3px;
+    border: 1px solid #e6ecf0;
+    outline: none;
+    resize: none;
+    width: 450px;
+    padding: 5px 10px;
+}
+
+.button{
+    display: inline-block;
+    background-color:#0084b4;
+    color: white;
+    border-radius: 100px !important;
+    margin-left: 300px;
+}
+
 .postsContainer{
     align-content: center;
     text-align: center;
@@ -49,6 +88,12 @@ img{
     clear: both;
     content: '';
     display: block;
+}
+
+img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
 }
 
 .postBox{

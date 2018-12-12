@@ -2,7 +2,9 @@
     margin: 0%;
     padding: 0%;
     overflow: hidden;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
+
 img{
     cursor: pointer;
 }

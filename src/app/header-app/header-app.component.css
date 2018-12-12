@@ -7,12 +7,12 @@
 .wrapper{
     margin: 0 auto;
     background: white;
-    color: grey;
+    color: #66757f;
     border-bottom: solid 1px grey;
 }
 .container .item{
     border-left: 1px solid white;
-    color: grey;    
+    color: #66757f!important;    
 }
 .ui.attached.menu {
     border: 0px;
@@ -24,9 +24,10 @@
     box-shadow: none;
     margin: 0 auto;
     border-left: 0px;
-    background: #2a2f50;
-    color: grey;
+    background: white;
+    color: #66757f;
 }
+
 .ui.menu .item:before {
     position: absolute;
     content: '';
@@ -36,10 +37,7 @@
     width: 1px;
     background: transparent; 
 }
-.button {
-    background-color:#0084b4;
-    color: white;
-}
+
 
 .searcher i.icon.search{
     color: black;
@@ -58,10 +56,12 @@
     border-right: 1px solid transparent !important;
 }
 .itemHeader:hover{
-    color: #c7ab09  !important;
-    border-bottom: 4px solid #c7ab09;
+    color: #0084b4  !important;
+    border-bottom: 2px solid #0084b4;
 }
 
-.briefcase:hover{
-    color: #c7ab09  !important;
+.button {
+    background-color:#0084b4;
+    color: white;
+    border-radius: 100px !important;
 }

@@ -3,7 +3,9 @@
     padding: 0%;
     overflow: hidden;
     box-sizing: border-box;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
+
 img{
     cursor: pointer;
     max-height: 250px;
@@ -12,7 +14,7 @@ img{
 /* GENERAL */
 .container{
     background: white;
-    border: 3px solid #2a2f50;
+    border: 3px solid #0084b4;
     border-radius: 15px;
     /*padding: 12px;*/
 }
@@ -25,7 +27,6 @@ img{
 }
 .sectionContainer{
     margin: 25px 0px;
-    box-shadow: 7px 10px 15px #2a2f50;
 }
 .center{
     text-align: center;
