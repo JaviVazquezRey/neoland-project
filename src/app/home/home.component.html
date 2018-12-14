@@ -1,37 +1,38 @@
 <form 
     [formGroup]="formNewPost"
     (ngSubmit)="onSubmit()">
-    <p>
-        <label for="title">Title</label>
+    <p  style="display: none">
+            <label for="title">Title</label>
         <input type="text" formControlName="title">
     </p>
-    <p>
-        <label for="fkUser">fkUser</label>
+    <p  style="display: none">
+            <label for="fkUser">fkUser</label>
         <input type="text" formControlName="fkUser">
     </p>
-    <p>
-        <label for="date">date</label>
+    <p  style="display: none">
+            <label for="date">date</label>
         <input type="text" formControlName="date">
     </p>
-    <p>
-        <label for="content">content</label>
+    <p  style="display: none">
+            <label for="content">content</label>
         <input type="text" formControlName="content">
     </p>
-    <p>
-        <label for="image">image</label>
+    <p  style="display: none">
+            <label for="image">image</label>
         <input type="text" formControlName="image">
     </p>
-    <p>
-        <label for="video">video</label>
+    <p  style="display: none">
+            <label for="video">video</label>
         <input type="text" formControlName="video">
     </p>
-    <p>
-        <label for="links">links</label>
+    <p  style="display: none">
+            <label for="links">links</label>
         <input type="text" formControlName="links">
     </p>
-    <p>
+    <p  style="display: none">
    
-    <p><input type="submit" value="Post!"></p>
+    <p  style="display: none">
+                    <input type="submit" value="Post!"></p>
 
 </form>
 
@@ -41,23 +42,66 @@
     <!-- postS -->
 
     <!--need to add this to container for FEED-->
-    <div class="containerCompose">
-        <img src="../../assets/images/foto_linkedin_javi.png" alt="">
-        <div class="posting" name="posting" method="post" enctype="multipart/form-data">
-            <textarea class="composePost" placeholder="Compose post..."></textarea>
-            <button class="ui button">Post</button>
+<div class="container">
+    <div class="row">
+        <div class="whole col">
+            <div class="mt-5 mb-4 page-header">
+                <h1>News Feed</h1>
+                <hr>
+            </div>
+            <div class="feed-container">
+                    <div class="postsHeading">
+                            <h3 class="panelTitle pl-3">Latest Posts</h3>
+                    </div>
+                    <div class="feed-body">
+                            <div class="containerCompose">
+                                <div class="row">
+                                    <div>
+                                        <a class="profpic" href="">
+                                            <img class="img" src="../../assets/images/foto_linkedin_javi.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <div class="posting" name="posting" method="post" enctype="multipart/form-data">
+                                            <textarea class="composePost" placeholder="Compose post..."></textarea>
+                                            <button class="ui button">Post</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="stream">
+                                <li>
+                                    <div class="post-container">
+                                        <img class="img" src="../../assets/images/foto_linkedin_javi.png" alt="">
+                                        <h4 class="user-name">USER.NAME</h4>
+                                        <p class="postcontent">
+                                            CONTENT
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="post-container">
+                                        <img class="img" src="../../assets/images/foto_linkedin_javi.png" alt="">
+                                        <h4 class="user-name">USER.NAME</h4>
+                                        <p class="postcontent">
+                                                CONTENT
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                    </div>
+            </div>
         </div>
     </div>
-    <div class="postsHeading">
-            <h3 class="panelTitle">Latest Posts</h3>
-    </div>
+</div>
+
     
 
 
-    <section class="postSection container padNormal sectionContainer">
+    <section class="postSection padNormal sectionContainer">
 
         <div class="postsContainer">
-            <div class="postBox container shadow" *ngFor="let post of postsArray">
+            <div class="postBox container containerPosts shadow" *ngFor="let post of postsArray">
                 <a>
                     <div class="padNormal">
                         <div class="visualPart">

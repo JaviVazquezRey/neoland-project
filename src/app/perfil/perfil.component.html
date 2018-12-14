@@ -1,8 +1,20 @@
-<div class="mainContent">
+<!-- <div class="mainContent">
   <div class="visual">
-    <a [href]="usuarioLogueado?.linkFacebook" target="_blank"><img class="photoUser" [src]="usuarioLogueado?.urlimage"></a>
-    
-    
+    <div>
+      <div>
+          <img class="photoUser" [src]="'http://localhost:3000/images/'+usuarioLogueado?.urlimage">
+      </div>
+      <ul class="containerLinks">
+        <li><a [href]="usuarioLogueado?.linkFacebook" target="_blank"><i class="facebook icon"></i></a></li>
+        <li><a [href]="usuarioLogueado?.linkLinkedin" target="_blank"><i class="linkedin icon"></i></a></li>
+        <li><a [href]="usuarioLogueado?.linkGithub" target="_blank"><i class="github icon"></i></a></li>
+        <li><a [href]="usuarioLogueado?.linkMedium" target="_blank"><i class="medium icon"></i></a></li>
+        <li><a [href]="usuarioLogueado?.linkYoutube" target="_blank"><i class="youtube icon"></i></a></li>
+      </ul>       
+    </div>
+ 
+
+
     <div class="presentationContent">
       <div class="nameContainer">
         <h4>{{usuarioLogueado?.alias}}</h4>
@@ -16,10 +28,10 @@
   </div>
 
   <div class="nonVisual">
-    
+     -->
     
     <!-- POSTS -->
-    <section class="postsListContainer container padNormal sectionContainer">
+    <!-- <section class="postsListContainer container padNormal sectionContainer">
         <div class="">
             <h2>Actividades y Posts</h2>
             <div class="postContainer container row padNormal" *ngFor="let post of postsArray">
@@ -39,11 +51,11 @@
             </div>
           
         </div>
-    </section>
+    </section> -->
 
 
     <!-- PROJECTS -->
-    <section class="projectSection container padNormal sectionContainer">
+    <!-- <section class="projectSection container padNormal sectionContainer">
       <h2>Projects</h2>
       <div class="projectsContainer">
         <div class="projectBox container col-2" *ngFor="let project of projectsArray">
@@ -63,10 +75,10 @@
     </section>
 
 
-  </div>
+  </div> -->
 
   <!-- FORMULARIO UPDATE -->
-  <form
+  <!-- <form
   [formGroup]="formUpdateUser"
   (ngSubmit)="onSubmit()">
 
@@ -150,4 +162,23 @@
   <p><input type="submit" value="Actualizar!"></p>
 
   </form>
-</div>
+</div> -->
+
+<div class="container">
+        <div class="row">
+            <div class="whole col-3">
+                <div class="mt-5 mb-4 page-header">
+                    <h1>USERNAME</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="mt-5 feed-container">
+                    <ul class="stream">
+                        <li class="post">
+                            <img src="../../assets/images/fondo_javi.png" alt="">
+                            <h1>POST?.TITLE</h1>
+                            <p>POST?.CONTENT</p>
+                        </li>
+                    </ul>
+            </div>

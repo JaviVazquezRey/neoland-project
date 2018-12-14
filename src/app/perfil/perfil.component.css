@@ -1,8 +1,55 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    overflow: hidden;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    font-family: 'Helvetica-Neue', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{
+    cursor: pointer;
 }
 
 img{
@@ -10,15 +57,18 @@ img{
 }
 
 /* GENERAL */
-.container{
+/* .container{
     background: white;
     border: 3px solid #2a2f50;
     border-radius: 15px;
-    /*padding: 12px;*/
+} */
+
+i.icon{
+    height: auto !important;
 }
 
 
-@media (min-width: 576px){
+/* @media (min-width: 576px){
     .container {
         max-width: 100%;
     }
@@ -39,7 +89,7 @@ img{
     text-align: center;
 }
 /* VISUAL */
-.visual{
+/* .visual{
     background-image: url("../../assets/images/fondo_javi.png");
     background-repeat: cover;
     padding-bottom: 50px; 
@@ -51,6 +101,9 @@ img{
     content: '';
     display: block;
 }
+.visual>div{
+    float: left;
+}
 
 .visual .photoUser{
     width: 150px;
@@ -60,9 +113,12 @@ img{
     box-shadow: 7px 10px 15px #2a2f50;
     float: left;
 }
+.containerLinks li{
+    display:inline-block;
+}
+
 .presentationContent{
     width: 70%;
-    float: left;
     margin-left: 15px;
 }
 .presentationContent div{
@@ -83,7 +139,7 @@ img{
 
 
 /* POSTS */
-.imagePost{
+/* .imagePost{
     width: 100%;
     height: 100%;
 }
@@ -98,10 +154,10 @@ h2{
 .postContainer img{
     width: 100%;
     background: lightcoral;
-}
+} */
 
 /* PROJECTS */
-.projectsContainer:after{
+/* .projectsContainer:after{
     clear: both;
     content: '';
     display: block;
@@ -116,4 +172,23 @@ h2{
     width: 100%;
     height: auto;
     cursor: pointer;
+} */ 
+
+.feed-container{
+    border: 1px solid #ddd;
+}
+
+.stream{
+    border: 1px solid #ddd;
+}
+
+.stream li{
+    border-bottom: 1px solid #eeeeee;
+    padding: 9px 12px;
+}
+
+li img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
 }

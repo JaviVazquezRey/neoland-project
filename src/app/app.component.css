@@ -2,22 +2,22 @@
 body{
     background: rgba(191, 186, 186, 0.289);
 }
-.container{
+.wrapper{
          padding-right: 0px; 
     padding-left: 0px; 
 }
 @media (max-width: 768px){
-    .container{
+    .wrapper{
         margin: 0px;
        max-width: 100%;
     }
-    .sectionContainer{
+    .contentContainer{
         max-width: 100% !important;
     }
 }
 
 @media (min-width: 576px){
-.container {
+.wrapper {
     max-width: 100%;
 }
 }

@@ -217,22 +217,22 @@ export class NetworkComponent implements OnInit {
     //   }
     // ]
   }
-  onSubmit() {
-    console.log(this.formNewUser.value) 
-    this.apiService.newUser(this.formNewUser.value).then((res) => {
-      console.log(res.json())
+  // onSubmit() {
+  //   console.log(this.formNewUser.value) 
+  //   this.apiService.newUser(this.formNewUser.value).then((res) => {
+  //     console.log(res.json())
       
-      const response = res.json()
-      if (response.error) {
-        alert(response.error)
-      }
-      else {
-        this.apiService.getUsers().then((res) => {
-          this.usersArray = res.json()
-        })
-      }
-    })
-  }
+  //     const response = res.json()
+  //     if (response.error) {
+  //       alert(response.error)
+  //     }
+  //     else {
+  //       this.apiService.getUsers().then((res) => {
+  //         this.usersArray = res.json()
+  //       })
+  //     }
+  //   })
+  // }
 
   ngOnInit() {
     this.apiService.getUsers().then((res) => {

@@ -3,9 +3,22 @@
     font-weight: 100;
  }
 
- .header{
-    background: lightcoral;
+ .mt-6{
+    margin-top: 12rem;
 }
+
+.mt-7{
+    margin-top: 7rem;
+}
+
+.pb-6{
+    padding-bottom: 15rem;
+}
+
+ hr{
+     border-color: white;
+     border-bottom: 1px solid rgb(194, 194, 194);
+ }
 
  .log{
      background-color: white;
@@ -14,49 +27,68 @@
  }
  
  .intro{
-    background-color: #1da1f2;
+    background-color: #13294B;
     color: white;
  }
 
+ .headline{
+     font-family: 'brown';
+     font-weight: 500;
+     line-height: 1.4;
+     margin-left: 5%;
+ }
+
  @media screen and (max-width: 768px) {
-    h1{
-        font-size: 20px;
+    .headline{
+        font-size: 40px;
+    }
+    .lead{
+        font-size: 14px;
     }
 }
 
- h1{
-     font-family: 'brown';
-     font-weight: 100;
+ .lead{
+    padding-left: 15%;
+    padding-right: 15%;
  }
+
+ .headline{
+    padding-left: 15%;
+    padding-right: 15%;
+ }
+
+ /*buttons*/
  
  .button{
     align-items: center;
 }
 
  .signbtn{
-     background-color: #1da1f2;
+     background-color: rgb(33, 74, 134);
      padding: 5px 150px;
      border-radius: 20px;
      display:block;
      font-size: medium;
      margin: auto;
+     color: white;
  }
 
  .loginbtn{
-     color: #1da1f2;
+     color: #13294B;
      padding: 5px 150px;
      border-radius: 20px;
      display:block;
      font-size: medium;
      margin: 15px auto;
- }
+}
 
  .login:hover{
     background-color: #0084b4  !important;
 }
 
-.sign:hover{
-    background-color: #0084b4  !important;
+.signbtn:hover{
+    background-color: rgb(27, 57, 102);  
+    border-color: #13294B !important;
 }
 
 
@@ -65,20 +97,8 @@
 
 .animateif {
     background:white;
-    border:1px solid black;
-    padding:10px;
-  }
-  
-  .animateif.ng-enter, .animate-if.ng-leave {
-    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  }
-  
-  .animateif.ng-enter,
-  .animateif.ng-leave.ng-leave-active {
-    opacity:0;
-  }
-  
-  .animate-if.ng-leave,
-  .animate-if.ng-enter.ng-enter-active {
-    opacity:1;
+    border: thick double #ECD5B8;
+    padding: 15px;
+    margin: 0% 18%;
+    overflow: hidden;
   }

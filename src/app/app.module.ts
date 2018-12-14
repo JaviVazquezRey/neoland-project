@@ -19,6 +19,7 @@ import { RouterModule } from '@angular/router';
 import { NgReduxModule, NgRedux, DevToolsExtension } from '@angular-redux/store';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -75,7 +76,8 @@ import { UserNetworkComponent } from './network/user-network/user-network.compon
     RouterModule.forRoot(appRoutes),
     NgReduxModule,
     HttpModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

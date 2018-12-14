@@ -28,7 +28,7 @@ export class ApiService {
   newPost(values) {
     return this.http.post(`${this.baseUrl}/posts/`, values).toPromise()
   }
-  newUser(values) {
+  newUser(values, header) {
     return this.http.post(`${this.baseUrl}/users`, values).toPromise()
   }
   updateUser(idUser, values) {

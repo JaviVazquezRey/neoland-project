@@ -28,60 +28,63 @@ the header for this page should not have any of the nav bar visible (no log out,
 
   <div class="container-fluid">
     <div class="row">
-      <div class="intro col-lg-6 col-md-6 col-sm-12 col-xs-12 row-height">
-        <h1 class="mt-5 display-4 p-5">Create, Collaborate</h1>
-        <p class="p-3 lead">this is a description of the enterprise social network we've made. Feel free to fork this on GitHub</p>
-        <hr class="p-3 my-4">
+      <div class="pb-6 intro col-lg-6 col-md-6 col-sm-12 col-xs-12 row-height">
+        <h1 class="mt-6 headline display-3 align-middle pl-5">Create, Collaborate</h1>
+        <hr class="mb-5" width="75%">
+        <p class="lead">this is a description of the enterprise social network we've made. Feel free to fork this on GitHub :)</p>
       </div>
-      <div class="log col-6 row-height">
-        <p class="mt-5 text-center">Log in</p> 
+      <div class="pb-6 log col-lg-6 col-md-6 col-sm-12 col-xs-12 row-height">
+        <p style="display: none">
+            class="mt-5 text-center">Log in</p> 
 
         <form 
         [formGroup]="formLogin"
         (ngSubmit)="onSubmitLogin()">
-          <p>
+        <p  style="display: none">
             <label for="email">Email</label>
             <input type="text" formControlName="email">
           </p>
-          <p>
+          <p  style="display: none">
               <label for="password">Password</label>
               <input type="text" formControlName="password">
           </p>
       
-          <p><input type="submit" value="Palante!"></p>
+          <p  style="display: none">
+              <input type="submit" value="Palante!"></p>
         </form>
 
 
-        <p>Sign up!</p>
+        <p  style="display: none">
+            Sign up!</p>
         <form
         [formGroup]="formNewUser"
         (ngSubmit)="onSubmitSignup()">
     
-        <p>
-          <label for="name">Name</label>
+        <p  style="display: none">
+            <label for="name">Name</label>
           <input type="text" formControlName="name">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="surname">Surname</label>
             <input type="text" formControlName="surname">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="email">Email</label>
             <input type="text" formControlName="email">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="password">Password</label>
             <input type="text" formControlName="password">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="date">Date</label>
             <input type="text" formControlName="date">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="urlimage">Profile Picture</label>
             <input type="file" (change)="onFileChange($event)" formControlName="urlimage">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="location">Location</label>
             <input type="text" formControlName="location">
         </p>
@@ -109,7 +112,7 @@ the header for this page should not have any of the nav bar visible (no log out,
             <label for="linkYoutube">Link Youtube</label>
             <input type="text" formControlName="linkYoutube">
         </p>
-        <p>
+        <p  style="display: none">
             <label for="linkOthers">Link others</label>
             <input type="text" formControlName="linkOthers">
         </p>    
@@ -134,7 +137,8 @@ the header for this page should not have any of the nav bar visible (no log out,
             <input type="text" formControlName="otherInformation">
         </p>
     
-        <p><input type="submit" value="Sign up!"></p>
+        <p  style="display: none">
+            <input type="submit" value="Sign up!"></p>
     
         </form>
 
@@ -143,49 +147,66 @@ the header for this page should not have any of the nav bar visible (no log out,
 
         <button type="button" class="login mt-5 btn btn-primary">Sign up</button>
        <!- <button type="button" class="sign btn btn-light">Log in</button> -->
-     <div class="log col-lg-6 col-md-6 col-sm-12 col-xs-12 row-height text-center">
-        <p class="mt-5 text-center">Join NAMESITE today.</p>
-        <!--*ngIf="signupmodel" add this to form-->
-        <form class="animateif" [formGroup]="formNewUser"
+     <div class="log row-height text-center">
+         
+        <p class="mt-7 text-center">Join NAMESITE today.</p>
+
+        <button type="button" class="signbtn mt-5 btn btn-light" *ngIf="formToShow === 0" (click)="onClickSign()">Sign up</button>
+        <button type="button" class="loginbtn btn btn-light" *ngIf="formToShow === 0" (click)="onClickLog()">Log in</button>
+
+        <form class="animateif" [@fadeAllIn]="'stop'" [formGroup]="formNewUser" *ngIf="formToShow === 1"
         (ngSubmit)="onSubmitSignup()">
           <mat-form-field class="example-full-width" floatLabel="never" color="primary">
             <input matInput placeholder="name" formControlName="name">
           </mat-form-field>
+
+          <br>
          
           <mat-form-field class="example-full-width" floatLabel="never" color="primary">
             <input matInput placeholder="surname" formControlName="surname">
           </mat-form-field>
 
+          <br>
+
           <mat-form-field class="example-full-width" floatLabel="never" color="primary">
             <input type="email" matInput placeholder="email" formControlName="email">
           </mat-form-field>
          
+          <br>
+
           <mat-form-field class="example-full-width" floatLabel="never" color="primary">
             <input matInput placeholder="alias">
           </mat-form-field>
-         
+
+          <br>
+
           <mat-form-field class="example-full-width" floatLabel="never" color="primary">
             <input matInput type="password" placeholder="password" formControlName="password">
           </mat-form-field>
+
+          <br>
          
           <mat-form-field class="example-full-width" floatLabel="never" color="primary">
             <input matInput type="password" placeholder="confirm password">
           </mat-form-field>
+
           <br>
+
           <button mat-raised-button>Sign Up!</button>
         </form>
-         <form class="animateif" *ngIf="loginmodel" [formGroup]="formLogin" (ngSubmit)="onSubmitLogin()">
+        <form class="animateif" [@fadeAllIn]="'stop'" *ngIf="formToShow === 2" [formGroup]="formLogin" (ngSubmit)="onSubmitLogin()">
           <mat-form-field class="example-full-width" floatLabel="never" color="primary">
             <input matInput placeholder="username">
           </mat-form-field>
 
+          <br>
+
           <mat-form-field class="example-full-width" floatLabel="never" color="primary">
             <input matInput type="password" placeholder="password">
           </mat-form-field>
-
+          <br>
+          <button mat-raised-button>Welcome back!</button>
         </form>
-        <button type="button" class="signbtn mt-5 btn btn-primary">Sign up</button>
-        <button type="button" class="loginbtn btn btn-light">Log in</button>
       </div>
     </div>
   </div>
