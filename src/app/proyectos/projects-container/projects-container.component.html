@@ -21,7 +21,9 @@ FILTERS
     <section class="projectSection container padNormal sectionContainer">
       <div class="projectsContainer">
         <div class="projectBox container shadow" *ngFor="let project of projectsArray">
-          <div class="imageProject"> <img [src]="project.image" alt=""></div>
+          <div class="imageProject"> <img [src]="'http://localhost:3000/images/'+project?.image" alt=""></div>
+          <!-- 'http://localhost:3000/images/'+project?.image -->
+
           <div class="padNormal">
             <div class="visualPart">
               <div class="imageAuthorContainer">
@@ -52,7 +54,7 @@ FILTERS
       </p>
       <p>
           <label for="image">Image</label>
-          <input type="text" formControlName="image">
+          <input type="file" (change)="onFileChange($event)" formControlName="image">
       </p>
       <p>
           <label for="shortDescription">Short Description</label>

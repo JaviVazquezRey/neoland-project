@@ -3,6 +3,17 @@
 
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
+@font-face {
+    font-family: brown;
+    src: url('assets/font/brown.otf') format("opentype");
+  }
+
+  *{
+      font-family: brown;
+
+  }
+
+
 i.icon{
     height: auto !important;
 }

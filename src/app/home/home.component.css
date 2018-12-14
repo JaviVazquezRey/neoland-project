@@ -1,17 +1,84 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    overflow: hidden;
-    box-sizing: border-box;
-    color: #2a2f50;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 img{
     cursor: pointer;
-    max-height: 250px;
 }
 
 /* GENERAL */
 .container{
+    margin: 0 auto;
+}
+
+.whole{
+    padding-right: 15px;
+    padding-left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+@media screen and (max-width: 768px) {
+    .whole{
+        margin: 0 auto;
+    }
+}
+
+.profpic{
+    display: block;
+    width: 60px;
+    /* border-radius: 100px; */
+    float: left;
+}
+
+.containerPosts{
     background: white;
     border: 3px solid #2a2f50;
     border-radius: 15px;
@@ -41,14 +108,76 @@ img{
     color: #2a2f50;
 }
 /* postS */
+
+.page-header{
+    line-height: 1.1;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.feed-container{
+    border-radius: 4px;     
+    border: 1px solid #ddd;
+}
+
+.postsHeading{
+    border-color: #ddd;
+    background-color: #f5f5f5;
+    color: black;
+    padding: 10px 0px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.containerCompose{
+    background-color: rgb(229, 242, 247);
+    border: 1px solid #e6ecf0;
+    padding: 10px 12px;
+    align-content: center;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.containerCompose textarea{
+    border-radius: 3px;
+    border: 1px solid rgba(0,132,180,0.5);
+    outline: none;
+    resize: none;
+    width: 95%;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.button{
+    display: inline-block;
+    background-color:#0084b4;
+    color: white;
+    border-radius: 100px !important;
+}
+
+.button:hover{
+    background-color: rgb(0, 118, 161);
+    color: white;
+}
+
 .postsContainer{
     align-content: center;
     text-align: center;
 }
+
 .postsContainer:after{
     clear: both;
     content: '';
     display: block;
+}
+
+.img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-left: 25%;
 }
 
 .postBox{
@@ -56,7 +185,19 @@ img{
     width: 98%;
     /*height: 390px;*/
     margin: 0.44%;    
+}
 
+ul.stream li{
+    list-style: none;
+    padding: 1em 15px;
+    border-bottom: 1px solid #eeeeee;
+    line-height: 1.42857143;
+    background-color: white;
+    display: block;
+}
+
+.user-name{
+    font-weight: bold;
 }
 
 .imagepost img{

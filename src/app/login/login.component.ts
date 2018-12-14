@@ -6,20 +6,38 @@ import { strictEqual } from 'assert';
 import { stringify } from 'querystring';
 import { Router } from '../../../node_modules/@angular/router';
 import { HttpClient, HttpHeaders, HttpRequest } from '../../../node_modules/@angular/common/http';
+import { trigger, state, style, transition, animate } from '../../../node_modules/@angular/animations';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  animations: [
+    trigger('fadeAllIn', [
+      state('start', style({
+        'opacity': 0
+      })),
+      state('stop', style({
+        'opacity': 1
+      })),
+      transition('void => *', [
+        style({opacity:0}),
+        animate(1200)
+      ])
+    ])
+  ]
 })
 export class LoginComponent implements OnInit {
 
   formLogin: FormGroup
   formNewUser: FormGroup
   idUsuarioLogado: number
-  images:any
+  images: any
+  formToShow: number
+
 
   constructor(private apiService: ApiService, private router: Router, private http: HttpClient) { 
+    this.formToShow = 0
     this.formLogin = new FormGroup({
       email: new FormControl(''),
       password: new FormControl('')
@@ -65,7 +83,13 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  onClickLog() {
+    this.formToShow = 2;
+  }
 
+  onClickSign() {
+    this.formToShow = 1;
+  }
 
   onFileChange($event) {
     // console.log($event)
