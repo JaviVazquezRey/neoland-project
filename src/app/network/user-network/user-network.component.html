@@ -1,67 +1,96 @@
 <div class="mainContent">
-  <div class="visual">
-    <img class="photoUser" [src]="user.urlimage">
-    
-    <div class="presentationContent">
-      <div class="nameContainer">
-        <h4>{{user.alias}}</h4>
-        <p>{{user.shortDescription}}</p>
+    <div class="visual">
+      <div>
+        <div>
+            <img class="photoUser" [src]="'http://localhost:3000/images/'+user?.urlimage">
+        </div>
+        <div class="containerLinks">
+            <ul >
+            <li><a [href]="user?.linkFacebook" target="_blank"><i class="facebook icon"></i></a></li>
+            <li><a [href]="user?.linkLinkedin" target="_blank"><i class="linkedin icon"></i></a></li>
+            <li><a [href]="user?.linkGithub" target="_blank"><i class="github icon"></i></a></li>
+            <li><a [href]="user?.linkMedium" target="_blank"><i class="medium icon"></i></a></li>
+            <li><a [href]="user?.linkYoutube" target="_blank"><i class="youtube icon"></i></a></li>
+            </ul>
+        </div>
+   
       </div>
-      <div class="shorPresentation">
-        <p>{{user.description}}</p>
+   
+  
+  
+      <div class="presentationContent">
+        <div class="nameContainer">
+          <h4 class="aliasUser bold">{{user?.alias}}</h4>
+          <p>{{user?.shortDescription}}</p>
+        </div>
+        <div class="shorPresentation">
+          <p>{{user?.description}}</p>
+        </div>
       </div>
+      
     </div>
-    
-  </div>
-
-  <div class="nonVisual">
-    
-    
-    <!-- POSTS -->
-    <section class="postsListContainer container padNormal sectionContainer">
-        <div class="">
-            <h2>Actividades y Posts</h2>
-            <div class="postContainer container row padNormal" *ngFor="let post of postsArray">
-              <div class="imageContainer floatLeft col-2">
-                <img class="imagePost" [src]="post.image">
-              </div>
-              <div class="content padNormal row col-10">
-                <h4>{{post.title}}</h4>
-                <h5>{{post.subtitle}}</h5>
-                <div class="description">
-                  <p>{{post.content}}</p>
+  
+    <div class="nonVisual">
+      
+        <section class="mt-3 projectSection container noBorder">
+            <!-- PROJECTS -->
+            <section class="left postAndProjectSection projectSection container">
+                <div class="postsHeading borderBottom">
+                    <h3 class="panelTitle pl-3">{{user.alias}}´s Projects</h3>
                 </div>
-                <div class="extra">
-                  Bootcamp: {{post.author}}
+                <div class="projectsContainer padNormal">
+                    <div class="projectBox container shadow" *ngFor="let project of projectsArray">
+                        <div class="imageProject">
+                            <img [src]="'http://localhost:3000/images/'+project?.image" alt="">
+                        </div>
+                        <!-- 'http://localhost:3000/images/'+project?.image -->
+            
+                        <div class="padNormal">
+                            <div class="visualPart">
+                                <div class="imageAuthorContainer">
+                                    <img class="imageAuthor" [src]="'http://localhost:3000/images/'+project?.urlimage" alt="">
+                                </div>
+                                <div class="mainProjectDetails">
+                                    <h5 class="bold mb-2">{{project.title}}</h5>
+                                    <p>{{project.shortDescription}}</p>
+                                    <!-- <p class="center">{{project.bootcamp}}</p> -->
+                                </div>
+                            </div>
+            
+                            <p style="display: none">{{project.description}}</p>
+                        </div>
+                        <div class="ui bottom attached button">
+                            <i class="add icon"></i>
+                            See more
+                        </div>
+                    </div>
+                </div>        
+            </section>
+
+            <section class="postAndProjectSection feed-container right">
+                <div class="postsHeading">
+                    <h3 class="panelTitle pl-3">{{user.alias}}´s Posts</h3>
                 </div>
-              </div>
-            </div>
-          
-        </div>
-    </section>
+                <div class="feed-body">                                                                                                               
+                    <ul class="stream">
+                        <li *ngFor="let post of postsArray">
+                            <div class="post-container row">
+                                <div class="left">
+                                    <img class="img" [src]="'http://localhost:3000/images/'+user?.urlimage" alt="">
+                                </div>
+                                <div class="right">
+                                    <h5 class="user-name">{{user?.alias}}</h5>
+                                    <p class="mb-3">{{post.date}}</p>
+                                    <p class="postcontent">{{post.content}}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>        
+        </section>
 
-
-    <!-- PROJECTS -->
-    <section class="projectSection container padNormal sectionContainer">
-      <h2>Projects</h2>
-      <div class="projectsContainer">
-        <div class="projectBox container col-2" *ngFor="let project of projectsArray">
-          <div class="imageProject"> <img [src]="project.image" alt=""></div>
-          <div class="padNormal">
-            <h4>{{project.title}}</h4>
-            <p>{{project.objetive}}</p>
-            <p class="center">{{project.bootcamp}}</p>
-            <p *ngIf="mostrarProjectDescription">{{project.description}}</p>
-          </div>
-          <div class="ui bottom attached button">
-            <i class="add icon"></i>
-            See more
-          </div>
-        </div>
-      </div>
-    </section>
-
+    </div>
+  
 
   </div>
-
-</div>

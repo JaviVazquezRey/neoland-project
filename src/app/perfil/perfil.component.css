@@ -2,6 +2,7 @@
     margin: 0%;
     padding: 0%;
     overflow: hidden;
+    color: #2a2f50;
 }
 img{
     cursor: pointer;
@@ -10,21 +11,28 @@ img{
 /* GENERAL */
 .container{
     background: white;
-    border: 3px solid #2a2f50;
-    border-radius: 15px;
+    border-radius: 4px;
+    border: 1px solid rgb(181, 178, 178);
     /*padding: 12px;*/
+}
+.noBorder{
+    border: transparent;
 }
 
 i.icon{
     height: auto !important;
 }
 
+.postAndProjectSection{
+    width: 49.5%;
+}
 
-@media (min-width: 576px){
+
+/* @media (min-width: 576px){
     .container {
         max-width: 100%;
     }
-}
+} */
 
 .padNormal{
     padding: 12px;
@@ -33,20 +41,21 @@ i.icon{
 .floatLeft{
     float: left;
 }
-.sectionContainer{
+/* .sectionContainer{
     margin: 25px 0px;
     box-shadow: 7px 10px 15px #2a2f50;
-}
+} */
 .center{
     text-align: center;
 }
 /* VISUAL */
 .visual{
-    background-image: url("../../assets/images/fondo_javi.png");
-    background-repeat: cover;
+    background: lightblue;
+    /* background-image: url("../../assets/images/fondo_javi.png");
+    background-repeat: cover; */
     padding-bottom: 50px; 
-    padding: 20px;
-    box-shadow: 7px 10px 15px #2a2f50;   
+    padding: 20px 0px 10px 100px;
+    /* box-shadow: 7px 10px 15px #2a2f50;    */
 }
 .visual:after{
     clear: both;
@@ -60,24 +69,34 @@ i.icon{
 .visual .photoUser{
     width: 150px;
     height: 150px;
-    border: 3px solid #2a2f50;
     border-radius: 50%;
-    box-shadow: 7px 10px 15px #2a2f50;
+    border: 1px solid rgb(181, 178, 178);
+    /* box-shadow: 7px 10px 15px #2a2f50; */
     float: left;
+}
+
+.containerLinks ul{
+    margin: auto;
+    padding-left: 5px;
 }
 .containerLinks li{
     display:inline-block;
+    margin: 5px;
 }
+.containerLinks li i{
+    color: #2a2f50;
+}
+
 
 .presentationContent{
     width: 70%;
     margin-left: 15px;
+
 }
 .presentationContent div{
     background: white;
-    border: 3px solid #2a2f50;
-    box-shadow: 7px 10px 15px #2a2f50;
-    border-radius: 15px;
+    border: 1px solid rgb(181, 178, 178);    /* box-shadow: 7px 10px 15px #2a2f50; */
+    border-radius: 4px;
 }
 .presentationContent .nameContainer{
     min-width: 15%; 
@@ -85,12 +104,291 @@ i.icon{
     padding: 12px;
     margin-bottom: 15px;
 }
+.aliasUser{
+    font-size: 25px;
+}
 .presentationContent .shorPresentation{
     padding: 12px;
 }
 
+/* TONY CLASSES */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{
+    cursor: pointer;
+}
+
+/* GENERAL */
+.container{
+    margin: 0 auto;
+}
+
+.whole{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+@media screen and (max-width: 768px) {
+    .whole{
+        margin: 0 auto;
+    }
+}
+
+.profpic{
+    display: block;
+    width: 60px;
+    /* border-radius: 100px; */
+    float: left;
+}
+
+.containerPosts{
+    background: white;
+    border: 3px solid #2a2f50;
+    border-radius: 15px;
+    /*padding: 12px;*/
+}
+.padNormal{
+    padding: 12px;
+}
+
+.floatLeft{
+    float: left;
+}
+/* .sectionContainer{
+    margin: 25px 0px;
+    box-shadow: 7px 10px 15px #2a2f50;
+} */
+.center{
+    text-align: center;
+}
+/* .shadow{
+    box-shadow: 7px 10px 15px #2a2f50 !important;
+} */
+.bold{
+    font-weight: bolder;
+}
+.darkBlue{
+    color: #2a2f50;
+}
+/* postS */
+
+.page-header{
+    line-height: 1.1;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.feed-container{
+    border-radius: 4px;     
+    border: 1px solid rgb(181, 178, 178);
+    margin: auto;
+}
+
+.postsHeading{
+    border-color: #ddd;
+    background-color: #f5f5f5;
+    color: black;
+    padding: 10px 0px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.containerCompose{
+    background-color: rgb(229, 242, 247);
+    border: 1px solid #e6ecf0;
+    padding: 10px 12px;
+    align-content: center;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    height: 120px;
+}
+.textAreaContainer{
+    width: 100%;
+}
+.containerCompose textarea{
+    border-radius: 3px;
+    border: 1px solid rgba(0,132,180,0.5);
+    outline: none;
+    resize: none;
+    width: 95%;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+.postButtonContainer{
+    position: relative;
+}
+.postButtonContainer:after{
+    display: block;
+    clear: both;
+}
+
+.postButton{
+    position: absolute;
+    margin-top: 5px;
+    right: 20px;
+    background-color:#0084b4;
+    color: white;
+    border-radius: 100px !important;
+    margin-right: 0px !important; 
+}
+
+.button:hover{
+    background-color: rgb(0, 118, 161);
+    color: white;
+}
+
+.postsContainer{
+    align-content: center;
+    text-align: center;
+}
+
+.postsContainer:after{
+    clear: both;
+    content: '';
+    display: block;
+    content: "";
+}
+
+.img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.postBox{
+    float: left;
+    width: 98%;
+    /*height: 390px;*/
+    margin: 0.44%;    
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.post-container .right{
+    float: right;
+    padding-left: 15px;
+}
+ul.stream li{
+    list-style: none;
+    padding: 1em 15px;
+    border-bottom: 1px solid #eeeeee;
+    line-height: 1.42857143;
+    background-color: white;
+    display: block;
+    border-top: 1px solid rgb(181, 178, 178);
+
+}
+
+.user-name{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.imagepost img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.imageUserContainer{
+    margin: 0%;
+    background-color: green;
+    overflow: visible;
+    width: 7%;
+}
+.imageUser{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    float: left;
+}
+.mainpostDetails{
+    float: left;
+    width: 88%;
+    margin-left: 10px;
+    text-align: left;
+}
+/* .locationIcon{
+    font-size: 10px;
+} */
+
+
+
+
+
+
+
+
+
+
 
 /* POSTS */
+.postsHeading[_ngcontent-c6] {
+    border-color: #ddd;
+    background-color: #f5f5f5;
+    color: black;
+    padding: 10px 0px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
 .imagePost{
     width: 100%;
     height: 100%;
@@ -108,7 +406,42 @@ h2{
     background: lightcoral;
 }
 
+
+
+
+
+
+
+
 /* PROJECTS */
+.projectsContainer:after{
+    clear: both;
+    content: '';
+    display: block;
+}
+
+
+
+.imageProject img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.borderBottom{
+    border-bottom: 1px solid rgb(181, 178, 178);
+
+}
+
+
+
+
+/* PROJECTS */
+.projectsContainer{
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+}
 .projectsContainer:after{
     clear: both;
     content: '';
@@ -117,11 +450,36 @@ h2{
 
 .projectBox{
     float: left;
-    margin-right: 20px; 
+    width: 32%;
+    /*height: 390px;*/
+    margin: 0.44%;    
+    position: relative;
+    padding-bottom: 20px;
 }
 
 .imageProject img{
     width: 100%;
     height: auto;
     cursor: pointer;
+}
+.imageAuthorContainer{
+    margin: 0%;
+    background-color: green;
+    overflow: visible;
+    width: 16.66%;
+}
+.imageAuthor{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    float: left;
+}
+
+.visualPart{
+    margin-bottom: 15px;
+}
+.projectBox .button{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }

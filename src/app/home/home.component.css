@@ -1,3 +1,8 @@
+*{
+    color: #2a2f50;
+
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -118,7 +123,7 @@ img{
 
 .feed-container{
     border-radius: 4px;     
-    border: 1px solid #ddd;
+    border: 1px solid rgb(181, 178, 178);
 }
 
 .postsHeading{
@@ -138,8 +143,11 @@ img{
     align-content: center;
     border-bottom-width: 1px;
     border-bottom-style: solid;
+    height: 120px;
 }
-
+.textAreaContainer{
+    width: 100%;
+}
 .containerCompose textarea{
     border-radius: 3px;
     border: 1px solid rgba(0,132,180,0.5);
@@ -149,12 +157,22 @@ img{
     padding: 5px 10px;
     margin-left: 10px;
 }
+.postButtonContainer{
+    position: relative;
+}
+.postButtonContainer:after{
+    display: block;
+    clear: both;
+}
 
-.button{
-    display: inline-block;
+.postButton{
+    position: absolute;
+    margin-top: 5px;
+    right: 20px;
     background-color:#0084b4;
     color: white;
     border-radius: 100px !important;
+    margin-right: 0px !important; 
 }
 
 .button:hover{
@@ -171,13 +189,13 @@ img{
     clear: both;
     content: '';
     display: block;
+    content: "";
 }
 
 .img{
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    margin-left: 25%;
 }
 
 .postBox{
@@ -186,7 +204,13 @@ img{
     /*height: 390px;*/
     margin: 0.44%;    
 }
-
+.left{
+    float: left;
+}
+.right{
+    float: right;
+    padding-left: 15px;
+}
 ul.stream li{
     list-style: none;
     padding: 1em 15px;
@@ -194,10 +218,13 @@ ul.stream li{
     line-height: 1.42857143;
     background-color: white;
     display: block;
+    border-top: 1px solid rgb(181, 178, 178);
+
 }
 
 .user-name{
     font-weight: bold;
+    font-size: 18px;
 }
 
 .imagepost img{

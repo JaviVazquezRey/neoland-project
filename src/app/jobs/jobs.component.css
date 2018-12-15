@@ -1,5 +1,9 @@
 .filtersContainer{
-    padding: 20px;
+    padding: 20px 100px;
     color: white;
     background-color: lightblue; 
+}
+*{
+    color: #2a2f50;
+
 }

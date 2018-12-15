@@ -1,6 +1,4 @@
 *{
-    margin: 0%;
-    padding: 0%;
     overflow: hidden;
     box-sizing: border-box;
     color: #2a2f50;
@@ -13,8 +11,10 @@ img{
 /* GENERAL */
 .container{
     background: white;
-    border: 3px solid #2a2f50;
-    border-radius: 15px;
+    /* border: 1.5px solid #2a2f50; */
+    border-radius: 4px;
+    border: 1px solid rgb(181, 178, 178);
+    /* border-radius: 15px; */
     /*padding: 12px;*/
 }
 .padNormal{
@@ -24,21 +24,20 @@ img{
 .floatLeft{
     float: left;
 }
-.sectionContainer{
-    margin: 25px 0px;
+/* .sectionContainer{
     box-shadow: 7px 10px 15px #2a2f50;
-}
+} */
 .center{
     text-align: center;
 }
 .left{
     text-align: left;
 }
-.shadow{
+/* .shadow{
     box-shadow: 7px 10px 15px #2a2f50 !important;
-}
+} */
 .bold{
-    font-weight: bolder;
+    font-weight: bold;
 }
 .darkBlue{
     color: #2a2f50;
@@ -79,11 +78,18 @@ img{
     border-radius: 50%;
     float: left;
 }
+.jobTitle{
+    padding-bottom: 3px;
+    margin-bottom: 0px; 
+}
 .mainjobDetails{
     float: left;
     width: 88%;
     margin-left: 10px;
     text-align: left;
+}
+.jobDescription{
+    margin: 15px 0px;
 }
 /* .locationIcon{
     font-size: 10px;

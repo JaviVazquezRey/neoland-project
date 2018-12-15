@@ -3,36 +3,40 @@
     padding: 0%;
     overflow: hidden;
     box-sizing: border-box;
+    color: #2a2f50;
+
 }
 img{
     cursor: pointer;
     max-height: 250px;
 }
-
 /* GENERAL */
 .container{
     background: white;
-    border: 3px solid #2a2f50;
-    border-radius: 15px;
+    border-radius: 4px;
+    border: 1px solid rgb(181, 178, 178);    
+    /* border: 3px solid #2a2f50; */
     /*padding: 12px;*/
 }
 .padNormal{
     padding: 12px;
 }
-
+.bold{
+    font-weight: bold;
+}
 .floatLeft{
     float: left;
 }
 .sectionContainer{
-    margin: 25px 0px;
-    box-shadow: 7px 10px 15px #2a2f50;
+    margin: auto;
+    /* box-shadow: 7px 10px 15px #2a2f50; */
 }
 .center{
     text-align: center;
 }
-.shadow{
+/* .shadow{
     box-shadow: 7px 10px 15px #2a2f50 !important;
-}
+} */
 /* PROJECTS */
 .projectsContainer{
     align-content: center;
@@ -45,7 +49,6 @@ img{
     content: '';
     display: block;
 }
-
 .projectBox{
     float: left;
     width: 32%;
@@ -54,7 +57,6 @@ img{
     position: relative;
     padding-bottom: 46px;
 }
-
 .imageProject img{
     width: 100%;
     height: auto;
@@ -85,3 +87,26 @@ img{
     bottom: 0px;
     width: 100%;
 }
+.wrapper{
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.button{
+    outline: none;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline:hover {
+    color: #13294B;
+}
+.headingForm{
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    background-color: #13294B;
+    color: white;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-align: center!important;
+}
+
+
+

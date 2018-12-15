@@ -1,14 +1,15 @@
 <router-outlet></router-outlet>
 <!-- USERS -->
-<section class="userSection container padNormal sectionContainer">
+<section class="mt-3 userSection container padNormal sectionContainer">
     <div class="usersContainer">
       <div class="userBox container shadow" *ngFor="let user of usersArray" (click)="visitProfile(user.id)" >
-        <div class="imageuser"> <img [src]="user.urlimage" alt=""></div>
+        <div class="imageuser"> <img [src]="'http://localhost:3000/images/'+user?.urlimage" alt=""></div>
         <div class="padNormal">
           <div>
             <div class="mainuserDetails">
-              <h3>{{user.alias}}</h3>
-              <p class="fontSmall center">{{user.shortDescription}} | {{user.location}}</p>
+              <h5 class="mb-2 bold">{{user.alias}}</h5>
+              <p class="mb-2 fontSmall">{{user.location}}</p>
+              <p class="fontSmall center">{{user.shortDescription}}</p>
               <p class="center">{{user.bootcamp}}</p>
             </div>
           </div>

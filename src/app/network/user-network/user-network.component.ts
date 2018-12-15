@@ -29,6 +29,12 @@ export class UserNetworkComponent implements OnInit {
     this.apiService.getUserById(this.idUser).then((res) => {
       this.user = res.json()
     })
+    this.apiService.getPostByUser(this.idUser).then((res) => {
+      this.postsArray = res.json()
+    })
+    this.apiService.getProjectsByIdUser(this.idUser).then((res) => {
+      this.projectsArray = res.json()
+    })
 
   }
 

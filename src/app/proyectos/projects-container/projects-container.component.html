@@ -17,8 +17,50 @@ FILTERS
   </div>
 </div> -->
 
+
+<form 
+[formGroup]="formNewProject"
+(ngSubmit)="onSubmit()">
+<p>
+  <label for="title">Title</label>
+  <input type="text" formControlName="title">
+</p>
+<p>
+    <label for="image">Image</label>
+    <input type="file" (change)="onFileChange($event)" formControlName="image">
+</p>
+<p>
+    <label for="shortDescription">Short Description</label>
+    <input type="text" formControlName="shortDescription">
+</p>
+<p>
+    <label for="description">Description</label>
+    <input type="text" formControlName="description">
+</p>
+<p>
+    <label for="bootcamp">Bootcamp</label>
+    <input type="text" formControlName="bootcamp">
+</p>
+<p>
+    <label for="location">Location</label>
+    <input type="text" formControlName="location">
+</p>
+
+<p>
+    <label for="link">Link</label>
+    <input type="text" formControlName="link">
+</p>
+
+
+<p><input type="submit" value="Sign up!"></p>
+</form>
+
+
+
+
+
     <!-- PROJECTS -->
-    <section class="projectSection container padNormal sectionContainer">
+    <section class="mt-3 projectSection container padNormal sectionContainer">
       <div class="projectsContainer">
         <div class="projectBox container shadow" *ngFor="let project of projectsArray">
           <div class="imageProject"> <img [src]="'http://localhost:3000/images/'+project?.image" alt=""></div>
@@ -27,16 +69,16 @@ FILTERS
           <div class="padNormal">
             <div class="visualPart">
               <div class="imageAuthorContainer">
-                <img class="imageAuthor" [src]="project.urlimage" alt="">
+                <img class="imageAuthor" [src]="'http://localhost:3000/images/'+project?.urlimage" alt="">
               </div>
               <div class="mainProjectDetails">
-                  <h5>{{project.alias}} | {{project.title}}</h5>
+                  <h5 class="bold mb-2">{{project.title}}</h5>
                   <p>{{project.shortDescription}}</p>
-                  <p class="center">{{project.bootcamp}}</p>
+                  <!-- <p class="center">{{project.bootcamp}}</p> -->
               </div>
             </div>
 
-            <p >{{project.description}}</p>
+            <p style="display: none">{{project.description}}</p>
           </div>
           <div class="ui bottom attached button">
             <i class="add icon"></i>
@@ -45,50 +87,5 @@ FILTERS
         </div>
       </div>
 
-      <form 
-      [formGroup]="formNewProject"
-      (ngSubmit)="onSubmit()">
-      <p>
-        <label for="title">Title</label>
-        <input type="text" formControlName="title">
-      </p>
-      <p>
-          <label for="image">Image</label>
-          <input type="file" (change)="onFileChange($event)" formControlName="image">
-      </p>
-      <p>
-          <label for="shortDescription">Short Description</label>
-          <input type="text" formControlName="shortDescription">
-      </p>
-      <p>
-          <label for="description">Description</label>
-          <input type="text" formControlName="description">
-      </p>
-      <p>
-          <label for="bootcamp">Bootcamp</label>
-          <input type="text" formControlName="bootcamp">
-      </p>
-      <p>
-          <label for="location">Location</label>
-          <input type="text" formControlName="location">
-      </p>
-      <p>
-          <label for="state">State</label>
-          <input type="text" formControlName="state">
-      </p>
-      <p>
-          <label for="tags">Tags</label>
-          <input type="text" formControlName="tags">
-      </p>
-      <p>
-          <label for="link">Link</label>
-          <input type="text" formControlName="link">
-      </p>
-      <p>
-          <label for="date">Date</label>
-          <input type="text" formControlName="date">
-      </p>
-  
-      <p><input type="submit" value="Sign up!"></p>
-      </form>
+
     </section>

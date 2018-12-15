@@ -1,165 +1,248 @@
 <div class="mainContent">
-  <div class="visual">
-    <div>
-      <div>
-          <img class="photoUser" [src]="'http://localhost:3000/images/'+usuarioLogueado?.urlimage">
-      </div>
-      <ul class="containerLinks">
-        <li><a [href]="usuarioLogueado?.linkFacebook" target="_blank"><i class="facebook icon"></i></a></li>
-        <li><a [href]="usuarioLogueado?.linkLinkedin" target="_blank"><i class="linkedin icon"></i></a></li>
-        <li><a [href]="usuarioLogueado?.linkGithub" target="_blank"><i class="github icon"></i></a></li>
-        <li><a [href]="usuarioLogueado?.linkMedium" target="_blank"><i class="medium icon"></i></a></li>
-        <li><a [href]="usuarioLogueado?.linkYoutube" target="_blank"><i class="youtube icon"></i></a></li>
-      </ul>       
-    </div>
- 
-
-
-    <div class="presentationContent">
-      <div class="nameContainer">
-        <h4>{{usuarioLogueado?.alias}}</h4>
-        <p>{{usuarioLogueado?.shortDescription}}</p>
-      </div>
-      <div class="shorPresentation">
-        <p>{{usuarioLogueado?.description}}</p>
-      </div>
-    </div>
-    
-  </div>
-
-  <div class="nonVisual">
-    
-    
-    <!-- POSTS -->
-    <section class="postsListContainer container padNormal sectionContainer">
-        <div class="">
-            <h2>Actividades y Posts</h2>
-            <div class="postContainer container row padNormal" *ngFor="let post of postsArray">
-              <div class="imageContainer floatLeft col-2">
-                <img class="imagePost" [src]="post?.image">
-              </div>
-              <div class="content padNormal row col-10">
-                <h4>{{post?.title}}</h4>
-                <h5>{{post?.subtitle}}</h5>
-                <div class="description">
-                  <p>{{post?.content}}</p>
-                </div>
-                <div class="extra">
-                  Bootcamp: {{post?.author}}
-                </div>
-              </div>
+        <div class="visual">
+          <div>
+            <div>
+                <img class="photoUser" [src]="'http://localhost:3000/images/'+usuarioLogueado?.urlimage">
             </div>
+            <div class="containerLinks">
+                <ul >
+                <li><a [href]="usuarioLogueado?.linkFacebook" target="_blank"><i class="facebook icon"></i></a></li>
+                <li><a [href]="usuarioLogueado?.linkLinkedin" target="_blank"><i class="linkedin icon"></i></a></li>
+                <li><a [href]="usuarioLogueado?.linkGithub" target="_blank"><i class="github icon"></i></a></li>
+                <li><a [href]="usuarioLogueado?.linkMedium" target="_blank"><i class="medium icon"></i></a></li>
+                <li><a [href]="usuarioLogueado?.linkYoutube" target="_blank"><i class="youtube icon"></i></a></li>
+                </ul>
+            </div>
+       
+          </div>
+       
+      
+      
+          <div class="presentationContent">
+            <div class="nameContainer">
+              <h4 class="aliasUser bold">{{usuarioLogueado?.alias}}</h4>
+              <p>{{usuarioLogueado?.shortDescription}}</p>
+            </div>
+            <div class="shorPresentation">
+              <p>{{usuarioLogueado?.description}}</p>
+            </div>
+          </div>
           
         </div>
-    </section>
+      
+        <div class="nonVisual">
+          
+            <section class="mt-3 projectSection container noBorder">
+                <!-- PROJECTS -->
+                <section class="left postAndProjectSection projectSection container">
+                    <div class="postsHeading borderBottom">
+                        <h3 class="panelTitle pl-3">My Projects</h3>
+                    </div>
+                    <div class="projectsContainer padNormal">
+                        <div class="projectBox container shadow" *ngFor="let project of projectsArray">
+                            <div class="imageProject">
+                                <img [src]="'http://localhost:3000/images/'+project?.image" alt="">
+                            </div>
+                            <!-- 'http://localhost:3000/images/'+project?.image -->
+                
+                            <div class="padNormal">
+                                <div class="visualPart">
+                                    <div class="imageAuthorContainer">
+                                        <img class="imageAuthor" [src]="'http://localhost:3000/images/'+project?.urlimage" alt="">
+                                    </div>
+                                    <div class="mainProjectDetails">
+                                        <h5 class="bold mb-2">{{project.title}}</h5>
+                                        <p>{{project.shortDescription}}</p>
+                                        <!-- <p class="center">{{project.bootcamp}}</p> -->
+                                    </div>
+                                </div>
+                
+                                <p style="display: none">{{project.description}}</p>
+                            </div>
+                            <div class="ui bottom attached button">
+                                <i class="add icon"></i>
+                                See more
+                            </div>
+                        </div>
+                    </div>        
+                </section>
 
+                    <!-- PROJECTS
+                    <section class="col-5 projectSection container padNormal sectionContainer">
+                            <h2>Projects</h2>
+                            <div class="projectsContainer">
+                            <div class="projectBox container col-2" *ngFor="let project of projectsArray">
+                                <div class="imageProject"> <img [src]="project?.image" alt=""></div>
+                                <div class="padNormal">
+                                <h4>{{project?.title}}</h4>
+                                <p>{{project?.objetive}}</p>
+                                <p class="center">{{project?.bootcamp}}</p>
+                                <p *ngIf="mostrarProjectDescription">{{project?.description}}</p>
+                                </div>
+                                <div class="ui bottom attached button">
+                                <i class="add icon"></i>
+                                See more
+                                </div>
+                            </div>
+                            </div>
+                        </section> -->
+                                
 
-    <!-- PROJECTS -->
-    <section class="projectSection container padNormal sectionContainer">
-      <h2>Projects</h2>
-      <div class="projectsContainer">
-        <div class="projectBox container col-2" *ngFor="let project of projectsArray">
-          <div class="imageProject"> <img [src]="project?.image" alt=""></div>
-          <div class="padNormal">
-            <h4>{{project?.title}}</h4>
-            <p>{{project?.objetive}}</p>
-            <p class="center">{{project?.bootcamp}}</p>
-            <p *ngIf="mostrarProjectDescription">{{project?.description}}</p>
-          </div>
-          <div class="ui bottom attached button">
-            <i class="add icon"></i>
-            See more
-          </div>
+                    
+                    <!-- POSTS -->
+                    <!-- <section class="col-5 postsListContainer container padNormal sectionContainer">
+                        <div class="">
+                            <div class="postHeading">
+                                <h2>Actividades y Posts</h2>   
+                            </div>
+                            <div class="postContainer container row padNormal" *ngFor="let post of postsArray">
+                                <div class="imageContainer floatLeft col-2">
+                                <img class="imagePost" [src]="post?.image">
+                                </div>
+                                <div class="content padNormal row col-10">
+                                <h4>{{post?.title}}</h4>
+                                <h5>{{post?.subtitle}}</h5>
+                                <div class="description">
+                                    <p>{{post?.content}}</p>
+                                </div>
+                                <div class="extra">
+                                    Bootcamp: {{post?.author}}
+                                </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </section> -->
+
+                <section class="postAndProjectSection feed-container right">
+                    <div class="postsHeading">
+                        <h3 class="panelTitle pl-3">My Posts</h3>
+                    </div>
+                    <div class="feed-body">                                                
+                                                                    <!-- <div class="containerCompose">
+                                                                            <div class="row">
+                                                                                <div class="col-1">
+                                                                                    <div>
+                                                                                        <a class="profpic" href="">
+                                                                                            <img class="img" [src]="'http://localhost:3000/images/'+usuarioLogueado?.urlimage" alt="">
+                                                                                        </a>                                                
+                                                                                    </div>
+                                        
+                                                                                </div>
+                                                                                <div class="col-11">
+                                                                                    <div class="posting" name="posting" method="post" enctype="multipart/form-data">
+                                                                                        <form [formGroup]="formNewPost" (ngSubmit)="onSubmitPost()">
+                                                                                            <div class="textAreaContainer"><textarea class="composePost" formControlName="content"> </textarea></div>
+                                                                                            <div class="postButtonContainer row"><input class="ui button postButton" type="submit" value="Post"> </div>                                                  
+                                                                                        </form>
+                                        
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> -->                                                                        
+                        <ul class="stream">
+                            <li *ngFor="let post of postsArray">
+                                <div class="post-container row">
+                                    <div class="left">
+                                        <img class="img" [src]="'http://localhost:3000/images/'+usuarioLogueado?.urlimage" alt="">
+                                    </div>
+                                    <div class="right">
+                                        <h5 class="user-name">{{usuarioLogueado?.alias}}</h5>
+                                        <p class="mb-3">{{post.date}}</p>
+                                        <p class="postcontent">{{post.content}}</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>        
+            </section>
+
         </div>
+      
+        <!-- FORMULARIO UPDATE -->
+        <form
+        [formGroup]="formUpdateUser"
+        (ngSubmit)="onSubmitUpdate()">
+      
+        <p>
+          <label for="name">Name</label>
+          <input type="text" formControlName="name">
+        </p>
+        <p>
+            <label for="surname">Surname</label>
+            <input type="text" formControlName="surname">
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="text" formControlName="email">
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="text" formControlName="password">
+        </p>
+        <p>
+            <label for="date">Date</label>
+            <input type="text" formControlName="date">
+        </p>
+        <p>
+            <label for="urlimage">image</label>
+            <input type="text" formControlName="urlimage">
+        </p>
+        <p>
+            <label for="location">Location</label>
+            <input type="text" formControlName="location">
+        </p>
+        <p>
+            <label for="alias">Alias</label>
+            <input type="text" formControlName="alias">
+        </p>
+        <p>
+            <label for="linkFacebook">Link FB</label>
+            <input type="text" formControlName="linkFacebook">
+        </p>
+        <p>
+            <label for="linkGithub">Link Github</label>
+            <input type="text" formControlName="linkGithub">
+        </p>
+        <p>
+            <label for="linkLinkedin">Link Linkedin</label>
+            <input type="text" formControlName="linkLinkedin">
+        </p>
+        <p>
+            <label for="linkMedium">Link Medium</label>
+            <input type="text" formControlName="linkMedium">
+        </p>
+        <p>
+            <label for="linkYoutube">Link Youtube</label>
+            <input type="text" formControlName="linkYoutube">
+        </p>
+        <p>
+            <label for="linkOthers">Link others</label>
+            <input type="text" formControlName="linkOthers">
+        </p>    
+        <p>
+            <label for="shortDescription">Short description</label>
+            <input type="text" formControlName="shortDescription">
+        </p>
+        <p>
+            <label for="description">description</label>
+            <input type="text" formControlName="description">
+        </p>
+        <p>
+            <label for="education">Education</label>
+            <input type="text" formControlName="education">
+        </p>    
+        <p>
+            <label for="experience">Experience</label>
+            <input type="text" formControlName="experience">
+        </p>
+        <p>
+            <label for="otherInformation">Other</label>
+            <input type="text" formControlName="otherInformation">
+        </p>
+      
+        <p><input type="submit" value="Actualizar!"></p>
+      
+        </form>
       </div>
-    </section>
-
-
-  </div>
-
-  <!-- FORMULARIO UPDATE -->
-  <form
-  [formGroup]="formUpdateUser"
-  (ngSubmit)="onSubmit()">
-
-  <p>
-    <label for="name">Name</label>
-    <input type="text" formControlName="name">
-  </p>
-  <p>
-      <label for="surname">Surname</label>
-      <input type="text" formControlName="surname">
-  </p>
-  <p>
-      <label for="email">Email</label>
-      <input type="text" formControlName="email">
-  </p>
-  <p>
-      <label for="password">Password</label>
-      <input type="text" formControlName="password">
-  </p>
-  <p>
-      <label for="date">Date</label>
-      <input type="text" formControlName="date">
-  </p>
-  <p>
-      <label for="urlimage">image</label>
-      <input type="text" formControlName="urlimage">
-  </p>
-  <p>
-      <label for="location">Location</label>
-      <input type="text" formControlName="location">
-  </p>
-  <p>
-      <label for="alias">Alias</label>
-      <input type="text" formControlName="alias">
-  </p>
-  <p>
-      <label for="linkFacebook">Link FB</label>
-      <input type="text" formControlName="linkFacebook">
-  </p>
-  <p>
-      <label for="linkGithub">Link Github</label>
-      <input type="text" formControlName="linkGithub">
-  </p>
-  <p>
-      <label for="linkLinkedin">Link Linkedin</label>
-      <input type="text" formControlName="linkLinkedin">
-  </p>
-  <p>
-      <label for="linkMedium">Link Medium</label>
-      <input type="text" formControlName="linkMedium">
-  </p>
-  <p>
-      <label for="linkYoutube">Link Youtube</label>
-      <input type="text" formControlName="linkYoutube">
-  </p>
-  <p>
-      <label for="linkOthers">Link others</label>
-      <input type="text" formControlName="linkOthers">
-  </p>    
-  <p>
-      <label for="shortDescription">Short description</label>
-      <input type="text" formControlName="shortDescription">
-  </p>
-  <p>
-      <label for="description">description</label>
-      <input type="text" formControlName="description">
-  </p>
-  <p>
-      <label for="education">Education</label>
-      <input type="text" formControlName="education">
-  </p>    
-  <p>
-      <label for="experience">Experience</label>
-      <input type="text" formControlName="experience">
-  </p>
-  <p>
-      <label for="otherInformation">Other</label>
-      <input type="text" formControlName="otherInformation">
-  </p>
-
-  <p><input type="submit" value="Actualizar!"></p>
-
-  </form>
-</div>
