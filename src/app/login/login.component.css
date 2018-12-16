@@ -19,7 +19,6 @@
      border-color: white;
      border-bottom: 1px solid rgb(194, 194, 194);
  }
-
  .log{
      background-color: white;
      color: black;
@@ -30,14 +29,12 @@
     background-color: #13294B;
     color: white;
  }
-
  .headline{
      font-family: 'brown';
      font-weight: 500;
      line-height: 1.4;
      margin-left: 5%;
  }
-
  @media screen and (max-width: 768px) {
     .headline{
         font-size: 40px;
@@ -46,23 +43,20 @@
         font-size: 14px;
     }
 }
-
  .lead{
     padding-left: 15%;
     padding-right: 15%;
  }
-
  .headline{
     padding-left: 15%;
     padding-right: 15%;
  }
-
  /*buttons*/
  
  .button{
     align-items: center;
+    outline: none;
 }
-
  .signbtn{
      background-color: rgb(33, 74, 134);
      padding: 5px 150px;
@@ -72,7 +66,6 @@
      margin: auto;
      color: white;
  }
-
  .loginbtn{
      color: #13294B;
      padding: 5px 150px;

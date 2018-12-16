@@ -52,10 +52,6 @@ img{
     cursor: pointer;
 }
 
-img{
-    cursor: pointer;
-}
-
 /* GENERAL */
 /* .container{
     background: white;
@@ -68,7 +64,7 @@ i.icon{
 }
 
 
-/* @media (min-width: 576px){
+@media (min-width: 576px){
     .container {
         max-width: 100%;
     }
@@ -81,52 +77,62 @@ i.icon{
 .floatLeft{
     float: left;
 }
+
 .sectionContainer{
     margin: 25px 0px;
-    box-shadow: 7px 10px 15px #2a2f50;
 }
+
 .center{
     text-align: center;
 }
+
 /* VISUAL */
-/* .visual{
-    background-image: url("../../assets/images/fondo_javi.png");
+.visual{
+    background-color: #13294B;
     background-repeat: cover;
     padding-bottom: 50px; 
     padding: 20px;
-    box-shadow: 7px 10px 15px #2a2f50;   
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    height: 150px;
 }
+
 .visual:after{
     clear: both;
     content: '';
     display: block;
 }
+
 .visual>div{
     float: left;
 }
 
 .visual .photoUser{
-    width: 150px;
-    height: 150px;
-    border: 3px solid #2a2f50;
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border: 4px solid white;
     border-radius: 50%;
-    box-shadow: 7px 10px 15px #2a2f50;
     float: left;
+    bottom: -87px;
+    left: 7%;
 }
+
 .containerLinks li{
     display:inline-block;
+    padding-left: 5%;
 }
 
 .presentationContent{
     width: 70%;
     margin-left: 15px;
 }
+
 .presentationContent div{
     background: white;
-    border: 3px solid #2a2f50;
-    box-shadow: 7px 10px 15px #2a2f50;
-    border-radius: 15px;
+    border: 1px solid black;
 }
+
 .presentationContent .nameContainer{
     min-width: 15%; 
     max-width: 60%;
@@ -137,27 +143,78 @@ i.icon{
     padding: 12px;
 }
 
+.whole{
+    padding-left: 5%;
+}
 
-/* POSTS */
-/* .imagePost{
+.page-header hr{
+    width: 85%;
+}
+
+.canopyContainer{
+    margin: 0 auto;
+    max-width: 890px;
+}
+
+.profileCanopy{
+    height: 60px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
+}
+
+.navbar li{
+    color: #B7B8B9;
+    font-size: small;
+}
+
+/*POSTS*/
+.feed-container{
+    border-radius: 4px;     
+    border: 1px solid #ddd;
+    margin: 4% 10%;
+}
+
+.postsHeading{
+    border-color: #ddd;
+    background-color: #f5f5f5;
+    color: black;
+    padding: 10px 0px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.imagePost{
     width: 100%;
     height: 100%;
 }
+
 h2{
     margin-bottom: 15px;
 }
+
+h1, h4{
+    font-weight: bold;
+}
+
 .postContainer{
     margin: auto;
     padding: 0%; 
     margin-bottom: 15px;
 }
+
 .postContainer img{
     width: 100%;
     background: lightcoral;
-} */
+} 
 
 /* PROJECTS */
-/* .projectsContainer:after{
+.projectsContainer:after{
     clear: both;
     content: '';
     display: block;
@@ -172,23 +229,31 @@ h2{
     width: 100%;
     height: auto;
     cursor: pointer;
-} */ 
-
-.feed-container{
-    border: 1px solid #ddd;
-}
-
-.stream{
-    border: 1px solid #ddd;
-}
+} 
 
 .stream li{
+    list-style: none;
+    padding: 1em 15px;
     border-bottom: 1px solid #eeeeee;
-    padding: 9px 12px;
+    line-height: 1.42857143;
+    background-color: white;
+    display: block;
 }
+
 
 li img{
     width: 48px;
     height: 48px;
     border-radius: 50%;
+}
+
+.editButton{
+    border: 1px solid #66757f;
+    color: #66757f;
+    border-radius: 100px !important;
+    float: right;
+}
+
+div:after{
+    clear: both;
 }

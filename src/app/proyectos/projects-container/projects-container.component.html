@@ -17,24 +17,146 @@ FILTERS
   </div>
 </div> -->
 
+
+<!-- <form 
+[formGroup]="formNewProject"
+(ngSubmit)="onSubmit()">
+<p>
+  <label for="title">Title</label>
+  <input type="text" formControlName="title">
+</p>
+<p>
+    <label for="image">Image</label>
+    <input type="file" (change)="onFileChange($event)" formControlName="image">
+</p>
+<p>
+    <label for="shortDescription">Short Description</label>
+    <input type="text" formControlName="shortDescription">
+</p>
+<p>
+    <label for="description">Description</label>
+    <input type="text" formControlName="description">
+</p>
+<p>
+    <label for="bootcamp">Bootcamp</label>
+    <input type="text" formControlName="bootcamp">
+</p>
+<p>
+    <label for="location">Location</label>
+    <input type="text" formControlName="location">
+</p>
+<p>
+    <label for="state">State</label>
+    <input type="text" formControlName="state">
+</p>
+<p>
+    <label for="tags">Tags</label>
+    <input type="text" formControlName="tags">
+</p> -->
+
+<!-- <p>
+    <label for="date">Date</label>
+    <input type="text" formControlName="date">
+</p> -->
+
+<!-- <p><input type="submit" value="Sign up!"></p>
+</form> -->
+
+<h2>Your network's projects</h2>
+<button class="button" *ngIf="formShow === 0" (click)="showForm()" mat-stroked-button>Add a project!</button>
+
+
+
+
+<form class="text-center border border-light p-5" *ngIf="formShow === 1" [formGroup]="formNewProject"
+(ngSubmit)="onSubmit()">
+  <div class="wrapper">
+  <p class="headingForm h4 mb-4">Add a project</p>
+  <p>
+      <mat-form-field class="fullWidth">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="" formControlName="title">
+        <mat-hint></mat-hint>
+      </mat-form-field>
+  </p>
+      <p>
+          <label for="image">Image</label>
+          <input type="file" (change)="onFileChange($event)" formControlName="image">
+      </p>
+      <p  style="display: none">
+          <mat-form-field class="fullWidth" >
+              <mat-label>Short Description</mat-label>
+              <input matInput placeholder="" formControlName="shortDescription">
+            </mat-form-field>
+      </p>
+<p>
+          <mat-form-field class="fullWidth">
+          <mat-label>Describe your project</mat-label>
+          <input matInput placeholder="" formControlName="description">
+          <mat-hint></mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+          <mat-form-field class="fullWidth">
+            <mat-label>Bootcamp</mat-label>
+            <input matInput placeholder="" formControlName="bootcamp">
+            <mat-hint></mat-hint>
+          </mat-form-field>
+      </p>
+      <p  style="display: none">
+          <mat-form-field class="fullWidth" >
+          <mat-label>Location</mat-label>
+          <input matInput placeholder="" formControlName="location">
+          <mat-hint>City</mat-hint>
+        </mat-form-field>
+    </p>
+    <p  style="display: none">
+        <mat-form-field class="fullWidth" >
+        <mat-label>State</mat-label>
+        <input matInput placeholder="" formControlName="state">
+      </mat-form-field>
+  </p>
+  <p>
+      <mat-form-field class="fullWidth" >
+          <mat-label>Tags</mat-label>
+          <input matInput placeholder="" formControlName="tags">
+      </mat-form-field>
+  </p>
+  <p  style="display: none">
+      <mat-form-field class="fullWidth" >
+          <mat-label>Date</mat-label>
+          <input matInput placeholder="" formControlName="date">
+        </mat-form-field>
+
+  </p>
+
+
+  <!-- Sign in button -->
+  <button mat-raised-button color="info" block="true" *ngIf="formShow === 1" class="button my-4" type="submit" value="submit">Publish project :)</button>
+</div>
+
+</form>
+
     <!-- PROJECTS -->
-    <section class="projectSection container padNormal sectionContainer">
+    <section class="mt-3 projectSection container padNormal sectionContainer">
       <div class="projectsContainer">
         <div class="projectBox container shadow" *ngFor="let project of projectsArray">
-          <div class="imageProject"> <img [src]="project.image" alt=""></div>
+          <div class="imageProject"> <img [src]="'http://localhost:3000/images/'+project?.image" alt=""></div>
+          <!-- 'http://localhost:3000/images/'+project?.image -->
+
           <div class="padNormal">
             <div class="visualPart">
               <div class="imageAuthorContainer">
-                <img class="imageAuthor" [src]="project.urlimage" alt="">
+                <img class="imageAuthor" [src]="'http://localhost:3000/images/'+project?.urlimage" alt="">
               </div>
               <div class="mainProjectDetails">
-                  <h5>{{project.alias}} | {{project.title}}</h5>
+                  <h5 class="bold mb-2">{{project.title}}</h5>
                   <p>{{project.shortDescription}}</p>
-                  <p class="center">{{project.bootcamp}}</p>
+                  <!-- <p class="center">{{project.bootcamp}}</p> -->
               </div>
             </div>
 
-            <p >{{project.description}}</p>
+            <p style="display: none">{{project.description}}</p>
           </div>
           <div class="ui bottom attached button">
             <i class="add icon"></i>
@@ -43,50 +165,5 @@ FILTERS
         </div>
       </div>
 
-      <form 
-      [formGroup]="formNewProject"
-      (ngSubmit)="onSubmit()">
-      <p>
-        <label for="title">Title</label>
-        <input type="text" formControlName="title">
-      </p>
-      <p>
-          <label for="image">Image</label>
-          <input type="text" formControlName="image">
-      </p>
-      <p>
-          <label for="shortDescription">Short Description</label>
-          <input type="text" formControlName="shortDescription">
-      </p>
-      <p>
-          <label for="description">Description</label>
-          <input type="text" formControlName="description">
-      </p>
-      <p>
-          <label for="bootcamp">Bootcamp</label>
-          <input type="text" formControlName="bootcamp">
-      </p>
-      <p>
-          <label for="location">Location</label>
-          <input type="text" formControlName="location">
-      </p>
-      <p>
-          <label for="state">State</label>
-          <input type="text" formControlName="state">
-      </p>
-      <p>
-          <label for="tags">Tags</label>
-          <input type="text" formControlName="tags">
-      </p>
-      <p>
-          <label for="link">Link</label>
-          <input type="text" formControlName="link">
-      </p>
-      <p>
-          <label for="date">Date</label>
-          <input type="text" formControlName="date">
-      </p>
-  
-      <p><input type="submit" value="Sign up!"></p>
-      </form>
+
     </section>
