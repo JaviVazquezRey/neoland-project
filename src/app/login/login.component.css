@@ -1,7 +1,21 @@
 *{
     font-family: 'Lato', sans-serif;
     font-weight: 100;
+    color: #2a2f50;
  }
+ .lightblueBackground{
+     background: lightblue !important;
+ }
+ .darkblueBackground{
+    background: #2a2f50 !important;
+}
+.fontColorWhite{
+    color: white;
+    font-weight: bold;
+}
+.logoBig{
+    width: 200px;
+}
  .mt-6{
     margin-top: 12rem;
 }
@@ -22,7 +36,7 @@
  }
  
  .intro{
-    background-color: #13294B;
+    background-image: url('../../assets/images/login/fondo1-networking.png');
     color: white;
  }
  .headline{
@@ -53,34 +67,39 @@
     align-items: center;
 }
  .signbtn{
-     background-color: rgb(33, 74, 134);
-     padding: 5px 150px;
-     border-radius: 20px;
+     background-color: #2a2f50;
+    width: 85.5px;
+    height: 36px;
+     border-radius: 4px;
      display:block;
      font-size: medium;
      margin: auto;
      color: white;
+     border: #2a2f50;
  }
  .loginbtn{
-     color: #13294B;
-     padding: 5px 150px;
-     border-radius: 20px;
+     color: #2a2f50;
+     width: 85.5px;
+     height: 36px;
+      border-radius: 4px;
      display:block;
      font-size: medium;
      margin: 15px auto;
+     
 }
  .login:hover{
-    background-color: #0084b4  !important;
+    background-color: #2a2f50  !important;
 }
 .signbtn:hover{
-    background-color: rgb(27, 57, 102);  
-    border-color: #13294B !important;
+    background-color: #2a2f50;  
+    border-color: #2a2f50 !important;
 }
 /*the animation that takes place with ngIf */
 /*enter n leave*/
 .animateif {
     background:white;
-    border: thick double #ECD5B8;
+    border-radius: 4px;
+    border: 1px solid rgb(181, 178, 178);    
     padding: 15px;
     margin: 0% 18%;
     overflow: hidden;

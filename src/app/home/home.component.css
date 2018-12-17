@@ -2,6 +2,16 @@
     color: #2a2f50;
 
 }
+.lightblueBackground{
+    background: lightblue !important;
+}
+.darkblueBackground{
+   background: #2a2f50 !important;
+}
+.fontColorWhite{
+   color: white;
+   font-weight: bold;
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -171,7 +181,6 @@ img{
     right: 20px;
     background-color:#0084b4;
     color: white;
-    border-radius: 100px !important;
     margin-right: 0px !important; 
 }
 
