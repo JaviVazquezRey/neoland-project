@@ -29,15 +29,92 @@ the header for this page should not have any of the nav bar visible (no log out,
   <div class="container-fluid">
     <div class="row">
       <div class="pb-6 intro col-lg-6 col-md-6 col-sm-12 col-xs-12 row-height">
-        <h1 class="mt-6 headline display-3 align-middle pl-5">Create, Collaborate</h1>
-        <hr class="mb-5" width="75%">
-        <p class="lead">this is a description of the enterprise social network we've made. Feel free to fork this on GitHub :)</p>
+        <!-- <h1 class="mt-6 headline display-3 align-middle pl-5">Create, Collaborate</h1> -->
+        <!-- <hr class="mb-5" width="75%"> -->
+        <!-- <p class="lead">this is a description of the enterprise social network we've made. Feel free to fork this on GitHub :)</p> -->
       </div>
-      <div class="pb-6 log col-lg-6 col-md-6 col-sm-12 col-xs-12 row-height">
-        <p style="display: none">
-            class="mt-5 text-center">Log in</p> 
+      <div class="pb-6 lightblueBackground log col-lg-6 col-md-6 col-sm-12 col-xs-12 row-height">
+        <p style="display: none" class="mt-5 text-center">Log in</p>
+        
+        <div class="log lightblueBackground row-height text-center">
+            <div class="mt-5">
+                <img class="logoBig" src="../../assets/images/logo1.png" alt="">
+            </div> 
+            <h2 class="mt-5 text-center">Join <strong>CodeNet</strong> today.</h2>
+    
+            <button type="button" class="signbtn mt-5 btn btn-light" *ngIf="formToShow === 0" (click)="onClickSign()">Sign up</button>
+            <button type="button" class="loginbtn btn btn-light" *ngIf="formToShow === 0" (click)="onClickLog()">Log in</button>
+    
+            <form class="animateif" [@fadeAllIn]="'stop'" [formGroup]="formNewUser" *ngIf="formToShow === 1"
+            (ngSubmit)="onSubmitSignup()">
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+                <input matInput placeholder="name" formControlName="name">
+              </mat-form-field>
+    
+              <br>
+             
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+                <input matInput placeholder="surname" formControlName="surname">
+              </mat-form-field>
+    
+              <br>
+    
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+                <input type="email" matInput placeholder="email" formControlName="email">
+              </mat-form-field>
+             
+              <br>
+    
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+                <input matInput placeholder="alias" formControlName="alias">
+              </mat-form-field>
+    
+              <!-- <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+                <input #imgFileInput (change)="onFileChange($event)" formControlName="urlimage" matInput placeholder="Select a profile image">
+              </mat-form-field> -->
 
-        <!-- <form 
+              <br>
+              <button type="button" md-button (click)="imgFileInput.click()">Add a profile image</button>
+              <input hidden type="file" #imgFileInput (change)="onFileChange($event)" formControlName="urlimage"/>
+                            
+    
+              <br>
+    
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+                <input matInput type="password" placeholder="password" formControlName="password">
+              </mat-form-field>
+    
+              <br>
+             
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+                <input matInput type="password" placeholder="confirm password">
+              </mat-form-field>
+    
+              <br>
+    
+              <button class="ui button darkblueBackground fontColorWhite" mat-raised-button>Sign Up!</button>
+            </form>
+    
+    
+    
+    
+            <form class="animateif" [@fadeAllIn]="'stop'" *ngIf="formToShow === 2" [formGroup]="formLogin" (ngSubmit)="onSubmitLogin()">
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+                <input matInput placeholder="email" formControlName="email">
+              </mat-form-field>
+    
+              <br>
+    
+              <mat-form-field class="example-full-width" floatLabel="never" color="primary">
+                <input matInput type="password" placeholder="password" formControlName="password">
+              </mat-form-field>
+              <br>
+              <button class="ui button darkblueBackground fontColorWhite" mat-raised-button>Welcome back!</button>
+            </form>
+          </div>
+      </div>
+<!-- LOGIN
+        <form 
         [formGroup]="formLogin"
         (ngSubmit)="onSubmitLogin()">
         <p  style="display: none">
@@ -147,70 +224,7 @@ the header for this page should not have any of the nav bar visible (no log out,
         <!-- <button type="button" class="login mt-5 btn btn-primary">Sign up</button> -->
        <!-- <button type="button" class="sign btn btn-light">Log in</button> -->
 
-     <div class="log row-height text-center">
-         
-        <p class="mt-7 text-center">Join NAMESITE today.</p>
-
-        <button type="button" class="signbtn mt-5 btn btn-light" *ngIf="formToShow === 0" (click)="onClickSign()">Sign up</button>
-        <button type="button" class="loginbtn btn btn-light" *ngIf="formToShow === 0" (click)="onClickLog()">Log in</button>
-
-        <form class="animateif" [@fadeAllIn]="'stop'" [formGroup]="formNewUser" *ngIf="formToShow === 1"
-        (ngSubmit)="onSubmitSignup()">
-          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
-            <input matInput placeholder="name" formControlName="name">
-          </mat-form-field>
-
-          <br>
-         
-          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
-            <input matInput placeholder="surname" formControlName="surname">
-          </mat-form-field>
-
-          <br>
-
-          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
-            <input type="email" matInput placeholder="email" formControlName="email">
-          </mat-form-field>
-         
-          <br>
-
-          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
-            <input matInput placeholder="alias">
-          </mat-form-field>
-
-          <br>
-
-          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
-            <input matInput type="password" placeholder="password" formControlName="password">
-          </mat-form-field>
-
-          <br>
-         
-          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
-            <input matInput type="password" placeholder="confirm password">
-          </mat-form-field>
-
-          <br>
-
-          <button mat-raised-button>Sign Up!</button>
-        </form>
-        <form class="animateif" [@fadeAllIn]="'stop'" *ngIf="formToShow === 2" [formGroup]="formLogin" (ngSubmit)="onSubmitLogin()">
-          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
-            <input matInput placeholder="username">
-          </mat-form-field>
-
-          <br>
-
-          <mat-form-field class="example-full-width" floatLabel="never" color="primary">
-            <input matInput type="password" placeholder="password">
-          </mat-form-field>
-          <br>
-          <button mat-raised-button>Sign in</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
+     
 
 
 

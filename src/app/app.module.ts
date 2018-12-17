@@ -38,6 +38,7 @@ import { FilterJobsComponent } from './jobs/filter-jobs/filter-jobs.component';
 import { JobsContainerComponent } from './jobs/jobs-container/jobs-container.component';
 import { NetworkComponent } from './network/network.component';
 import { UserNetworkComponent } from './network/user-network/user-network.component';
+import { LoginGuard } from './login.guard';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,7 @@ import { UserNetworkComponent } from './network/user-network/user-network.compon
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

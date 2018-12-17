@@ -152,7 +152,7 @@
                                                     <!-- <input   placeholder="Compose post..."></textarea> -->
                                                     <div class="textAreaContainer"><textarea class="composePost" formControlName="content"> </textarea></div>
                                                     <!-- <button class="ui button">Post</button> -->
-                                                    <div class="postButtonContainer row"><input class="ui button postButton" type="submit" value="Post"> </div>                                                  
+                                                    <div class="postButtonContainer row"><input class="ui button postButton ui button darkblueBackground fontColorWhite" type="submit" value="Post"> </div>                                                  
                                                 </form>
 
                                             </div>
@@ -165,10 +165,10 @@
                                 <ul class="stream">
                                     <li *ngFor="let post of postsArray">
                                         <div class="post-container row">
-                                            <div class="left">
+                                            <div class="left col-1 row">
                                                 <img class="img" [src]="'http://localhost:3000/images/'+post.urlimage" alt="">
                                             </div>
-                                            <div class="right">
+                                            <div class="right col-11">
                                                 <h3 class="user-name">{{post.alias}}</h3>
                                                 <p class="mb-3">{{post.date}}</p>
                                                 <p class="postcontent">{{post.content}}</p>
