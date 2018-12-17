@@ -18,9 +18,24 @@ export class PerfilComponent implements OnInit {
   postsArray: any[]
   infoProject: boolean
 
+  formNewPost: FormGroup
   formUpdateUser: FormGroup;
+  formShow: number
   
   constructor(private apiService: ApiService, private router: Router) { 
+
+    this.formShow = 0
+    
+    this.formNewPost = new FormGroup({
+      title: new FormControl(''),
+      fkUser: new FormControl(''),
+      date: new FormControl(''),
+      content: new FormControl(''),
+      image: new FormControl(''),
+      video: new FormControl(''),
+      links: new FormControl('')
+    })
+    
     this.formUpdateUser = new FormGroup({
       name: new FormControl(''),
       surname: new FormControl(''),
@@ -239,7 +254,29 @@ export class PerfilComponent implements OnInit {
     // console.log(this.idUsuarioLogado)
   }
 
+
   onSubmit() {
+    
+    console.log(this.formNewPost.value)
+    console.log(this.idUsuarioLogado)
+
+    this.apiService.newPost(this.formNewPost.controls.content.value, this.idUsuarioLogado).then((res) => {
+      console.log(res.json())
+      
+      const response = res.json()
+      if (response.error) {
+        alert(response.error)
+      }
+      else {
+        this.apiService.getPostByUser(this.idUsuarioLogado).then((res) => {
+          this.postsArray = res.json()
+          console.log(this.postsArray)
+        })
+      }
+    })
+  }
+
+  onSubmitUpdate() {
     console.log(this.formUpdateUser.value) 
     this.apiService.updateUser(this.idUsuarioLogado, this.formUpdateUser.value).then((res) => {
       console.log(res.json())
@@ -260,6 +297,19 @@ export class PerfilComponent implements OnInit {
     // this.apiService.getUserById
     this.obtener_localStorage()
     // console.log(this.idUsuarioLogado)
+
+
+    //Recupero Posts
+    this.apiService.getPostByUser(this.idUsuarioLogado).then((res) => {
+      this.postsArray = res.json()
+      console.log(this.postsArray)
+    })
+
+    //Recupero Projects
+    this.apiService.getProjectsByIdUser(this.idUsuarioLogado).then((res) => {
+      this.projectsArray = res.json()
+    })
+
 
     this.apiService.getUserById(this.idUsuarioLogado).then((res) => {
       this.usuarioLogueado = res.json()
@@ -292,6 +342,14 @@ export class PerfilComponent implements OnInit {
     console.log(pId)
     //$(this).next().slideToggle(2000, 'easeOutElastic'); //Esto último "easyOutElastic" es para darle efecto rebote
     
+  }
+
+  showForm() {
+    this.formShow = 1
+  }
+
+  hideForm() {
+    this.formShow = 0
   }
 
 }

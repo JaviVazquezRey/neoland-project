@@ -62,7 +62,7 @@ import { UserNetworkComponent } from './network/user-network/user-network.compon
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule,      
+    MatButtonModule,
     MatMenuModule,      
     MatToolbarModule,      
     MatIconModule,      

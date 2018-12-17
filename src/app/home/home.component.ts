@@ -11,6 +11,9 @@ export class HomeComponent implements OnInit {
 
   postsArray: any[]
   formNewPost: FormGroup
+  idUsuarioLogado: number
+  usuarioLogueado:any
+
 
   constructor(private apiService: ApiService) { 
     this.formNewPost = new FormGroup({
@@ -23,6 +26,10 @@ export class HomeComponent implements OnInit {
       links: new FormControl('')
     })
   }
+  obtener_localStorage() {
+    this.idUsuarioLogado = parseInt(localStorage.getItem("idUsuarioLogado"))
+     console.log(this.idUsuarioLogado)
+  }
 
   getPosts() {
     this.apiService.getPosts().then((res) => {
@@ -32,8 +39,11 @@ export class HomeComponent implements OnInit {
   }
 
   onSubmit() {
+    
     console.log(this.formNewPost.value)
-    this.apiService.newPost(this.formNewPost.value).then((res) => {
+    console.log(this.idUsuarioLogado)
+
+    this.apiService.newPost(this.formNewPost.controls.content.value, this.idUsuarioLogado).then((res) => {
       console.log(res.json())
       
       const response = res.json()
@@ -47,6 +57,12 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.obtener_localStorage()
+    this.apiService.getUserById(this.idUsuarioLogado).then((res) => {
+      this.usuarioLogueado = res.json()
+      console.log(this.usuarioLogueado.urlimage)
+    })
+
     this.getPosts()
   }
 

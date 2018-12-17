@@ -3,6 +3,8 @@
     padding: 0%;
     overflow: hidden;
     box-sizing: border-box;
+    color: #2a2f50;
+
 }
 img{
     cursor: pointer;
@@ -31,6 +33,10 @@ img{
 }
 .center{
     text-align: center;
+}
+
+.heading{
+    padding: 20px 100px;
 }
 /* .shadow{
     box-shadow: 7px 10px 15px #2a2f50 !important;
@@ -85,16 +91,26 @@ img{
     bottom: 0px;
     width: 100%;
 }
-
 .wrapper{
     border: 1px solid #ddd;
     margin: 0 auto;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 4px;     
+
 }
 
 .button{
     outline: none;
+}
+
+.publishButton{
+    background-color: #2a2f50;
+    color: white; 
+}
+
+.publishButton:hover{
+    background-color: #444d86;
 }
 
 .mat-form-field-appearance-outline .mat-form-field-outline:hover {
@@ -103,10 +119,17 @@ img{
 
 .headingForm{
     border-bottom: 1px solid rgba(0,0,0,.125);
-    background-color: rgb(43, 88, 155);
+    background-color: #2a2f50;
     font-weight: bold;
     color: white;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-align: center!important;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }

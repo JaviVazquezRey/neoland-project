@@ -139,4 +139,8 @@ export class ProjectsContainerComponent implements OnInit {
     this.formShow = 1
   }
 
+  hideForm() {
+    this.formShow = 0
+  }
+
 }

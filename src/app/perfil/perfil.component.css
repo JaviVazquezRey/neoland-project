@@ -1,3 +1,127 @@
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    color: #2a2f50;
+}
+
+img{
+    cursor: pointer;
+}
+
+/* GENERAL */
+/* .container{
+    background: white;
+    border-radius: 4px;
+    border: 1px solid rgb(181, 178, 178);
+    /*padding: 12px;*/
+
+.noBorder{
+    border: transparent;
+}
+
+i.icon{
+    height: auto !important;
+}
+
+.postAndProjectSection{
+    width: 49.5%;
+}
+
+
+/* @media (min-width: 576px){
+    .container {
+        max-width: 100%;
+    }
+} */
+
+.padNormal{
+    padding: 12px;
+}
+
+.floatLeft{
+    float: left;
+}
+/* .sectionContainer{
+    margin: 25px 0px;
+    box-shadow: 7px 10px 15px #2a2f50;
+} */
+.center{
+    text-align: center;
+}
+
+/* VISUAL */
+.visual{
+    background: lightblue;
+    /* background-image: url("../../assets/images/fondo_javi.png");
+    background-repeat: cover; */
+    padding-bottom: 50px; 
+    padding: 20px 0px 10px 100px;
+    /* box-shadow: 7px 10px 15px #2a2f50;    */
+}
+
+.visual:after{
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.visual>div{
+    float: left;
+}
+
+.visual .photoUser{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid rgb(181, 178, 178);
+    /* box-shadow: 7px 10px 15px #2a2f50; */
+    float: left;
+    bottom: -87px;
+    left: 7%;
+}
+
+.containerLinks ul{
+    margin: auto;
+    padding-left: 5px;
+}
+.containerLinks li{
+    display:inline-block;
+    margin: 5px;
+}
+.containerLinks li i{
+    color: #2a2f50;
+}
+
+
+.presentationContent{
+    width: 70%;
+    margin-left: 15px;
+
+}
+
+.presentationContent div{
+    background: white;
+    border: 1px solid rgb(181, 178, 178);    /* box-shadow: 7px 10px 15px #2a2f50; */
+    border-radius: 4px;
+}
+
+.presentationContent .nameContainer{
+    min-width: 15%; 
+    max-width: 60%;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+.aliasUser{
+    font-size: 25px;
+}
+.presentationContent .shorPresentation{
+    padding: 12px;
+}
+
+/* TONY CLASSES */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -22,7 +146,6 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
     vertical-align: baseline;
-    font-family: 'Helvetica-Neue', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -53,23 +176,39 @@ img{
 }
 
 /* GENERAL */
-/* .container{
-    background: white;
-    border: 3px solid #2a2f50;
-    border-radius: 15px;
-} */
-
-i.icon{
-    height: auto !important;
+.container{
+    margin: 0 auto;
 }
 
+.whole{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20%;
+    margin-right: 20%;
+}
 
-@media (min-width: 576px){
-    .container {
-        max-width: 100%;
+@media screen and (max-width: 768px) {
+    .whole{
+        margin: 0 auto;
     }
 }
 
+.profpic{
+    display: block;
+    width: 60px;
+    /* border-radius: 100px; */
+    float: left;
+}
+
+.containerPosts{
+    background: white;
+    border: 3px solid #2a2f50;
+    border-radius: 15px;
+    /*padding: 12px;*/
+}
 .padNormal{
     padding: 12px;
 }
@@ -77,100 +216,35 @@ i.icon{
 .floatLeft{
     float: left;
 }
-
-.sectionContainer{
+/* .sectionContainer{
     margin: 25px 0px;
-}
-
+    box-shadow: 7px 10px 15px #2a2f50;
+} */
 .center{
     text-align: center;
 }
+/* .shadow{
+    box-shadow: 7px 10px 15px #2a2f50 !important;
+} */
+.bold{
+    font-weight: bolder;
+}
+.darkBlue{
+    color: #2a2f50;
+}
+/* postS */
 
-/* VISUAL */
-.visual{
-    background-color: #13294B;
-    background-repeat: cover;
-    padding-bottom: 50px; 
-    padding: 20px;
-    border-bottom: 1px solid rgba(0,0,0,0.25);
-    position: relative;
-    height: 150px;
+.page-header{
+    line-height: 1.1;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 2em;
 }
 
-.visual:after{
-    clear: both;
-    content: '';
-    display: block;
-}
-
-.visual>div{
-    float: left;
-}
-
-.visual .photoUser{
-    position: absolute;
-    width: 170px;
-    height: 170px;
-    border: 4px solid white;
-    border-radius: 50%;
-    float: left;
-    bottom: -87px;
-    left: 7%;
-}
-
-.containerLinks li{
-    display:inline-block;
-    padding-left: 5%;
-}
-
-.presentationContent{
-    width: 70%;
-    margin-left: 15px;
-}
-
-.presentationContent div{
-    background: white;
-    border: 1px solid black;
-}
-
-.presentationContent .nameContainer{
-    min-width: 15%; 
-    max-width: 60%;
-    padding: 12px;
-    margin-bottom: 15px;
-}
-.presentationContent .shorPresentation{
-    padding: 12px;
-}
-
-.whole{
-    padding-left: 5%;
-}
-
-.page-header hr{
-    width: 85%;
-}
-
-.canopyContainer{
-    margin: 0 auto;
-    max-width: 890px;
-}
-
-.profileCanopy{
-    height: 60px;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
-}
-
-.navbar li{
-    color: #B7B8B9;
-    font-size: small;
-}
-
-/*POSTS*/
 .feed-container{
     border-radius: 4px;     
-    border: 1px solid #ddd;
-    margin: 4% 10%;
+    border: 1px solid rgb(181, 178, 178);
+    margin: auto;
 }
 
 .postsHeading{
@@ -183,12 +257,149 @@ i.icon{
     border-top-right-radius: 3px;
 }
 
+.containerCompose{
+    background-color: rgb(229, 242, 247);
+    border: 1px solid #e6ecf0;
+    padding: 10px 12px;
+    align-content: center;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    height: 120px;
+}
+.textAreaContainer{
+    width: 100%;
+}
+.containerCompose textarea{
+    border-radius: 3px;
+    border: 1px solid rgba(0,132,180,0.5);
+    outline: none;
+    resize: none;
+    width: 95%;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+.postButtonContainer{
+    position: relative;
+}
+.postButtonContainer:after{
+    display: block;
+    clear: both;
+}
+
+.postButton{
+    position: absolute;
+    margin-top: 5px;
+    right: 20px;
+    background-color:#0084b4;
+    color: white;
+    border-radius: 100px !important;
+    margin-right: 0px !important; 
+    outline: none;
+}
+
+.button:hover{
+    background-color: rgb(0, 118, 161);
+    color: white;
+}
+
+.postsContainer{
+    align-content: center;
+    text-align: center;
+}
+
+.postsContainer:after{
+    clear: both;
+    content: '';
+    display: block;
+    content: "";
+}
+
 .img{
     width: 48px;
     height: 48px;
     border-radius: 50%;
 }
 
+.postBox{
+    float: left;
+    width: 98%;
+    /*height: 390px;*/
+    margin: 0.44%;    
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.post-container .right{
+    float: right;
+    padding-left: 15px;
+}
+ul.stream li{
+    list-style: none;
+    padding: 1em 15px;
+    border-bottom: 1px solid #eeeeee;
+    line-height: 1.42857143;
+    background-color: white;
+    display: block;
+    border-top: 1px solid rgb(181, 178, 178);
+
+}
+
+.user-name{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.imagepost img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.imageUserContainer{
+    margin: 0%;
+    background-color: green;
+    overflow: visible;
+    width: 7%;
+}
+.imageUser{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    float: left;
+}
+.mainpostDetails{
+    float: left;
+    width: 88%;
+    margin-left: 10px;
+    text-align: left;
+}
+/* .locationIcon{
+    font-size: 10px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+/* POSTS */
+.postsHeading[_ngcontent-c6] {
+    border-color: #ddd;
+    background-color: #f5f5f5;
+    color: black;
+    padding: 10px 0px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
 .imagePost{
     width: 100%;
     height: 100%;
@@ -210,8 +421,14 @@ h1, h4{
 
 .postContainer img{
     width: 100%;
-    background: lightcoral;
 } 
+
+
+
+
+
+
+
 
 /* PROJECTS */
 .projectsContainer:after{
@@ -220,40 +437,99 @@ h1, h4{
     display: block;
 }
 
+
+
+.imageProject img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.borderBottom{
+    border-bottom: 1px solid rgb(181, 178, 178);
+
+}
+
+
+
+
+/* PROJECTS */
+.projectsContainer{
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+}
+.projectsContainer:after{
+    clear: both;
+    content: '';
+    display: block;
+}
+
 .projectBox{
     float: left;
-    margin-right: 20px; 
+    width: 32%;
+    /*height: 390px;*/
+    margin: 0.44%;    
+    position: relative;
+    padding-bottom: 20px;
 }
 
 .imageProject img{
     width: 100%;
     height: auto;
     cursor: pointer;
-} 
-
-.stream li{
-    list-style: none;
-    padding: 1em 15px;
-    border-bottom: 1px solid #eeeeee;
-    line-height: 1.42857143;
-    background-color: white;
-    display: block;
+}
+.imageAuthorContainer{
+    margin: 0%;
+    background-color: green;
+    overflow: visible;
+    width: 16.66%;
+}
+.imageAuthor{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    float: left;
 }
 
+.visualPart{
+    margin-bottom: 15px;
+}
+.projectBox .button{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    outline:none;
+}
 
-li img{
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+.headingForm{
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    background-color: #2a2f50;
+    font-weight: bold;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center!important;
+    font-size: 1.3rem;
+}
+
+.wrapper{
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 4px;    
+}
+
+button{
+    outline: none;
 }
 
 .editButton{
-    border: 1px solid #66757f;
-    color: #66757f;
-    border-radius: 100px !important;
-    float: right;
+    margin: 30px;
 }
 
-div:after{
-    clear: both;
+.updateButton{
+    background-color: #2a2f50;
+    color: white; 
 }

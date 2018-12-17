@@ -1,10 +1,10 @@
-<div>
+<!-- <div>
   <h5>Filtros:</h5>
   <p>Bootcamp: {{bootcamp | async}}  |  Location: {{center | async}}  |  Company: {{company | async}} }}</p>
-</div>
+</div> -->
 
     <!-- JOBS -->
-    <section class="jobSection container padNormal sectionContainer">
+    <section class="mt-3 jobSection container padNormal sectionContainer">
       <div class="jobsContainer">
         <div class="jobBox container shadow" *ngFor="let job of jobsArray" (click)="irALinkOferta(job.linkWebsite)" href="job.linkWebsite" target="_blank">
           <a href="job.linkWebsite" target="blank">
@@ -14,20 +14,20 @@
                 <img class="logo" [src]="job.logo" alt="">
               </div>
               <div class="mainjobDetails">
-                  <h5 class="bolder darkBlue">{{job.title}}</h5>
+                  <h3 class="bold darkBlue jobTitle">{{job.title}}</h3>
                   <p class="m-1"><i class="map marker alternate icon locationIcon"></i> {{job.location}}      |      {{job.date}}</p>
-                  <p class="m-1 pb-2">{{job.shortDescription}}</p>
+                  <p class="jobDescription">{{job.description}}</p>
                   <p>Contact mail: <span class="bold darkBlue">{{job.contactEmail}}</span></p>
               </div>
             </div>
 
-            <p >{{job.description}}</p>
+            <!-- <p class="left jobDescription">{{job.description}}</p> -->
           </div>
           </a> 
-          <div class="ui bottom attached button">
+          <!-- <div class="ui bottom attached button">
             <i class="add icon"></i>
             See more
-          </div>
+          </div> -->
         </div>
       </div>
     </section>

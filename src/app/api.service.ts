@@ -13,11 +13,17 @@ export class ApiService {
   getProjects() {
     return this.http.get(`${this.baseUrl}/projects/`).toPromise()
   }
+  getProjectsByIdUser(idUser) {
+    return this.http.get(`${this.baseUrl}/projects/${idUser}`).toPromise()
+  }
   getJobs() {
     return this.http.get(`${this.baseUrl}/jobs/`).toPromise()
   }
   getPosts() {
     return  this.http.get(`${this.baseUrl}/posts/`).toPromise()
+  }
+  getPostByUser(idUser){
+    return  this.http.get(`${this.baseUrl}/posts/${idUser}`).toPromise()
   }
   getUsers() {
     return this.http.get(`${this.baseUrl}/users/`).toPromise()
@@ -25,8 +31,8 @@ export class ApiService {
   getUserById(idUser) {
     return this.http.get(`${this.baseUrl}/users/${idUser}`).toPromise()
   }
-  newPost(values) {
-    return this.http.post(`${this.baseUrl}/posts/`, values).toPromise()
+  newPost(content, fkUser) {
+    return this.http.post(`${this.baseUrl}/posts/`, { content, fkUser }).toPromise()
   }
   newUser(values, header) {
     return this.http.post(`${this.baseUrl}/users`, values).toPromise()

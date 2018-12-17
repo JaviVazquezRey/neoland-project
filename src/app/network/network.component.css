@@ -3,6 +3,8 @@
     padding: 0%;
     overflow: hidden;
     box-sizing: border-box;
+    color: #2a2f50;
+
  }
  img{
     cursor: pointer;
@@ -12,9 +14,14 @@
  /* GENERAL */
  .container{
     background: white;
-    border: 3px solid #2a2f50;
-    border-radius: 15px;
+    border-radius: 4px;
+    border: 1px solid rgb(181, 178, 178);
+    /* border: 3px solid #2a2f50;
+    border-radius: 15px; */
     /*padding: 12px;*/
+ }
+ .bold{
+     font-weight: bold;
  }
  .padNormal{
     padding: 12px;
@@ -24,15 +31,15 @@
     float: left;
  }
  .sectionContainer{
-    margin: 25px 0px;
-    box-shadow: 7px 10px 15px #2a2f50;
+    margin: auto;
+    /* box-shadow: 7px 10px 15px #2a2f50; */
  }
  .center{
     text-align: center;
  }
- .shadow{
+ /* .shadow{
     box-shadow: 7px 10px 15px #2a2f50 !important;
- }
+ } */
  .fontSmall{
     font-size: 12px;
  }
@@ -55,6 +62,7 @@
     /*height: 390px;*/
     margin: 1%;
     position: relative;
+    cursor: pointer;
  }
  
  .imageuser img{

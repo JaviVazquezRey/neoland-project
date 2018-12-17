@@ -61,10 +61,11 @@ FILTERS
 
 <!-- <p><input type="submit" value="Sign up!"></p>
 </form> -->
-
-<h2>Your network's projects</h2>
-<button class="button" *ngIf="formShow === 0" (click)="showForm()" mat-stroked-button>Add a project!</button>
-
+<div class="heading">
+  <h2>Your network's projects</h2>
+  <button class="p-2 button" *ngIf="formShow === 0" (click)="showForm()" mat-stroked-button>Add a project!</button>
+</div>
+<hr>
 
 
 
@@ -73,66 +74,66 @@ FILTERS
   <div class="wrapper">
   <p class="headingForm h4 mb-4">Add a project</p>
   <p>
-      <mat-form-field class="fullWidth">
+      <mat-form-field class="">
         <mat-label>Title</mat-label>
         <input matInput placeholder="" formControlName="title">
         <mat-hint></mat-hint>
       </mat-form-field>
   </p>
       <p>
-          <label for="image">Image</label>
-          <input type="file" (change)="onFileChange($event)" formControlName="image">
+        <button mat-button type="button" md-button (click)="imgFileInput.click()">Add a photo</button>
+        <input hidden type="file" #imgFileInput (change)="onFileChange($event)" formControlName="image">
       </p>
       <p  style="display: none">
-          <mat-form-field class="fullWidth" >
+          <mat-form-field class="" >
               <mat-label>Short Description</mat-label>
               <input matInput placeholder="" formControlName="shortDescription">
             </mat-form-field>
       </p>
 <p>
-          <mat-form-field class="fullWidth">
+          <mat-form-field class="">
           <mat-label>Describe your project</mat-label>
           <input matInput placeholder="" formControlName="description">
           <mat-hint></mat-hint>
         </mat-form-field>
       </p>
       <p>
-          <mat-form-field class="fullWidth">
+          <mat-form-field class="">
             <mat-label>Bootcamp</mat-label>
             <input matInput placeholder="" formControlName="bootcamp">
             <mat-hint></mat-hint>
           </mat-form-field>
       </p>
-      <p  style="display: none">
-          <mat-form-field class="fullWidth" >
+      <p style="display: none">
+          <mat-form-field class="" >
           <mat-label>Location</mat-label>
           <input matInput placeholder="" formControlName="location">
           <mat-hint>City</mat-hint>
         </mat-form-field>
-    </p>
-    <p  style="display: none">
-        <mat-form-field class="fullWidth" >
-        <mat-label>State</mat-label>
-        <input matInput placeholder="" formControlName="state">
-      </mat-form-field>
-  </p>
-  <p>
-      <mat-form-field class="fullWidth" >
-          <mat-label>Tags</mat-label>
-          <input matInput placeholder="" formControlName="tags">
-      </mat-form-field>
-  </p>
-  <p  style="display: none">
-      <mat-form-field class="fullWidth" >
-          <mat-label>Date</mat-label>
-          <input matInput placeholder="" formControlName="date">
+      </p>
+      <p style="display: none">
+          <mat-form-field class="" >
+          <mat-label>State</mat-label>
+          <input matInput placeholder="" formControlName="state">
         </mat-form-field>
-
-  </p>
+      </p>
+      <p>
+        <mat-form-field class="fullWidth" >
+            <mat-label>Tags</mat-label>
+            <input matInput placeholder="" formControlName="tags">
+        </mat-form-field>
+      </p>
+      <p style="display: none">
+        <mat-form-field class="fullWidth" >
+            <mat-label>Date</mat-label>
+            <input matInput placeholder="" formControlName="date">
+        </mat-form-field>
+      </p>
 
 
   <!-- Sign in button -->
-  <button mat-raised-button color="info" block="true" *ngIf="formShow === 1" class="button my-4" type="submit" value="submit">Publish project :)</button>
+
+  <button mat-raised-button color="info" block="true" *ngIf="formShow === 1" class="publishButton button p-2 my-4" (click)="hideForm()" type="submit" value="submit">Publish project :)</button>
 </div>
 
 </form>
